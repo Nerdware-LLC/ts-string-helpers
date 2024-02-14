@@ -4,112 +4,140 @@
       <img src="https://github.com/Nerdware-LLC/.github/blob/main/profile/nerdware_logo.png" height="120" alt="Nerdware logo" />
    </a>
 
-   <h1>Nerdware Template NPM Package Repo</h1>
+   <h1>Nerdware TypeScript String Helpers</h1>
 
-**🚀 An Awesome Template to Jumpstart Projects 🚀**
+**TypeScript utils to sanitize and validate strings in any environment 🎉**<br>ESM ✅ CommonJS ✅ NodeJS ✅ browsers ✅
 
-[![npm package][npm-badge]](https://www.npmjs.com/package/<NPM_PKG_NAME> "View this project on npm")
+[![npm package][npm-badge]](https://www.npmjs.com/package/@nerdware/ts-string-helpers "View this project on npm")
 [![Test Workflow][gh-test-badge]](.github/workflows/test.yaml "View Test Workflow file")
+[![CodeCov][codecov-badge]](https://codecov.io/gh/Nerdware-LLC/ts-string-helpers "View CodeCov report")
 [![pre-commit][pre-commit-badge]](https://pre-commit.com "pre-commit.com")
 [![semantic-release][semantic-badge]](https://github.com/semantic-release/semantic-release "github.com: semantic-release")
 [![License: MIT][license-badge]](/LICENSE "View License")
 
 <!--   BADGE LINKS   -->
-[npm-badge]: https://img.shields.io/npm/v/<NPM_PKG_NAME>?logo=npm&label=npm%40latest
-[gh-test-badge]: https://github.com/<REPO_OWNER>/<REPO_NAME>/actions/workflows/test.yaml/badge.svg?branch=main
+
+[npm-badge]: https://img.shields.io/npm/v/@nerdware/ts-string-helpers?logo=npm&label=npm%40latest
+[gh-test-badge]: https://github.com/Nerdware-LLC/ts-string-helpers/actions/workflows/test.yaml/badge.svg?branch=main
+[codecov-badge]: https://codecov.io/gh/Nerdware-LLC/ts-string-helpers/graph/badge.svg?token=Z2CY5FL04P
 [pre-commit-badge]: https://img.shields.io/badge/pre--commit-F8B424.svg?logo=pre-commit&logoColor=F8B424&labelColor=gray
 [semantic-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-E10079.svg
 [license-badge]: https://img.shields.io/badge/License-MIT-000080.svg
 
 </div>
 
-### **_Repo Setup_**
-
-1. > [!IMPORTANT] IMPORTANT
-   >
-   > **_Run the `init_repo_setup` script first!_**
-   > ```bash
-   > # From the root of the repo:
-   > ./scripts/init_repo_setup.sh
-   >
-   > # Then simply follow the prompts 👍
-   > # Once the script completes, continue to step 2, below.
-   >
-   > # TIP: If you'd like to review the changes the script will
-   > # make before running it, you can use the `--dry-run` flag:
-   > ./scripts/init_repo_setup.sh --dry-run
-   > ```
-
-2. Update `package.json` fields:
-
-   - `author`
-   - `keywords`
-
-3. Install dev dependencies — here's the command with recommended packages:
-
-   ```bash
-   npm i -D \
-      @serverless-guru/prettier-plugin-import-order \
-      @types/node \
-      @typescript-eslint/eslint-plugin \
-      @typescript-eslint/parser \
-      @vitest/coverage-v8 \
-      eslint \
-      eslint-config-prettier \
-      eslint-import-resolver-typescript \
-      eslint-plugin-import \
-      eslint-plugin-node \
-      eslint-plugin-vitest \
-      prettier \
-      type-fest \
-      typescript \
-      vitest \
-      vitest-github-actions-reporter
-   ```
-
-4. Set up [**pre-commit**](https://pre-commit.com/#install):
-
-   1. Ensure it's [installed](https://pre-commit.com/#install) locally or in an executable image.
-   2. Update the [**pre-commit config file**](/.pre-commit-config.yaml) with project-appropriate hooks and tools. The pre-commit project provides a complete list of [supported hooks here](https://pre-commit.com/hooks.html). Some popular hook sources:
-      - ["Out-of-the-Box" pre-commit Hooks](https://github.com/pre-commit/pre-commit-hooks)
-      - [pre-commit Hooks from gruntwork.io](https://github.com/gruntwork-io/pre-commit)
-      - [Some Terraform-specific pre-commit Hooks](https://github.com/antonbabenko/pre-commit-terraform)
-   3. Run `pre-commit install` to ensure local .git hooks are present.
-
-5. Complete the setup of the [`Test Workflow`](./.github/workflows/test.yaml) GitHub Action:
-
-   1. To enable [CodeCov](https://app.codecov.io/gh) updates, head to CodeCov and obtain a token for the repo. Then add the token as a [GitHub Actions Secret][gh-action-docs-url] named `CODECOV_TOKEN`.
-
-6. If the repo will include [branch protection rules][gh-branch-protect-url], take the additional steps needed to enable the [**Semantic-Release GitHub Action**][release-gh-action-url]:
-
-   1. [Create a GitHub Personal Access Token][gh-pat-docs-url]. When creating the token, the minimum required scopes are:
-      - `repo` for a private repository
-      - `public_repo` for a public repository
-   2. Add a [GitHub Actions Secret][gh-action-docs-url] to your repo named `SEMANTIC_RELEASE_TOKEN` with the value set to the new PAT you created in the previous step.
-   3. Once the secret has been added to your repo, update the [release.yaml workflow](/.github/workflows/release.yaml):
-      - Update **on.push.paths** path glob "\*\*" to reflect only the project files that should trigger the Release workflow (e.g., "\*.js" or "\*.tf").
-      - Delete the "**check-required-secret**" job (it was included so you can push initialization commits without triggering a bunch of failed GH Action runs).
-
-   > Optionally, if you'd like to auto-assign GH Issues on release failures, you can add **assignees** to the "@semantic-release/github" plugin in [.releaserc.yaml](/.releaserc.yaml).
-
-   [gh-branch-protect-url]: https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/about-protected-branches
-   [release-gh-action-url]: https://github.com/Nerdware-LLC/reusable-action-workflows#semantic-release
-   [gh-pat-docs-url]: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token
-   [gh-action-docs-url]: https://docs.github.com/en/actions/security-guides/encrypted-secrets
-
-7. Remove this section from the README.
-
-8. Profit 💰💰💰🥳🎉 <!-- https://knowyourmeme.com/memes/profit -->
+- [🚀 Getting Started](#-getting-started)
+  - [📦 Installation](#-installation)
+  - [🛠️ Usage](#️-usage)
+- [⚙️ API](#️-api)
+  - [Sanitizers](#sanitizers)
+  - [Validators](#validators)
+- [🤝 Contributing](#-contributing)
+- [📝 License](#-license)
+- [💬 Contact](#-contact)
 
 ## 🚀 Getting Started
 
-<!-- TODO Add usage info to README -->
+This package provides a lightweight set of TypeScript utils to `sanitize` and `validate` strings in any environment.
 
-🚧 This README is a work in progress. Please check back soon for more information. 🚧
+For each `sanitize` function, reverse-regex patterns are used to strip unwanted characters from strings — _even pesky zero-width control characters_ — leaving only the characters you want. This is useful for sanitizing user input and other untrusted data.
+
+Each `sanitize` method, there's a corresponding `validate` function to ensure strings match a specific format.
+
+### 📦 Installation
+
+Install the package using your package manager of choice:
+
+**npm**:
+
+```bash
+npm install @nerdware/ts-string-helpers
+```
+
+**yarn**:
+
+```bash
+yarn add @nerdware/ts-string-helpers
+```
+
+### 🛠️ Usage
+
+Here's a simple example of how to use the `sanitizeEmail` and `validateEmail` functions to sanitize and validate an email address before using it in a NodeJS Express route:
+
+```typescript
+import { sanitizeEmail, validateEmail } from "@nerdware/ts-string-helpers";
+import express from "express";
+import { UserModel } from "./models/my-user-model";
+
+// or const { sanitizeEmail } = require("@nerdware/ts-string-helpers");
+
+const app = express();
+
+app.use(express.json());
+
+app.post("/register", (req, res, next) => {
+  // Sanitize the unknown `email` input before using it!
+  const userEmail = sanitizeEmail(req.body.email);
+
+  // Validate the sanitized email
+  if (!validateEmail(userEmail)) {
+    return res.status(400).send("Invalid email address");
+  }
+
+  // Now you can safely use the sanitized value throughout the rest of your stack!🎉
+  const newUser = UserModel.create({ email: userEmail });
+
+  res.status(201).json(newUser);
+});
+```
+
+## ⚙️ API
+
+> [!TIP] Tip
+> In the tables below, click on a function to view the exact regex pattern it uses. The more complex patterns are accompanied by in-source documentation/explanations.
+
+### Sanitizers
+
+| Function                                                                   | Description                                                                                |
+| :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
+| [`sanitizeAlphabetic`](src/sanitize/alphabetic.ts)                         | Strips non-alphabetic characters                                                           |
+| [`sanitizeAlphabeticwithspaces`](src/sanitize/alphabeticWithSpaces.ts)     | Strips non-alphabetic/space characters                                                     |
+| [`sanitizeAlphanumeric`](src/sanitize/alphanumeric.ts)                     | Strips non-alphanumeric characters                                                         |
+| [`sanitizeAlphanumericwithspaces`](src/sanitize/alphanumericWithSpaces.ts) | Strips non-alphanumeric/space characters                                                   |
+| [`sanitizeEmail`](src/sanitize/email.ts)                                   | Strips invalid email characters (see [RFC 5322][rfc-5322])                                 |
+| [`sanitizeHandle`](src/sanitize/handle.ts)                                 | Strips invalid social-handle characters                                                    |
+| [`sanitizeID`](src/sanitize/id.ts)                                         | Strips non-alphanumeric characters which are not `_`, `-`, or `#`                          |
+| [`sanitizeJsonString`](src/sanitize/jsonString.ts)                         | Strips invalid JSON characters                                                             |
+| [`sanitizeNumeric`](src/sanitize/numeric.ts)                               | Strips non-numeric characters                                                              |
+| [`sanitizePassword`](src/sanitize/password.ts)                             | Strips non-alphanumeric characters which are not `!`, `@`, `#`, `$`, `%`, `^`, `&`, or `*` |
+| [`sanitizePhone`](src/sanitize/phone.ts)                                   | Alias of [`sanitizeNumeric`](src/sanitize/numeric.ts)                                      |
+| [`sanitizeToken`](src/sanitize/token.ts)                                   | Strips non-alphanumeric characters which are not `.`, `/`, or `+`                          |
+| [`sanitizeURL`](src/sanitize/url.ts)                                       | Strips invalid URL characters                                                              |
+
+[rfc-5322]: https://datatracker.ietf.org/doc/html/rfc5322
+
+### Validators
+
+| Function                                                                  | Description                                                                       |
+| :------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- |
+| [`isValidAlphabetic`](src/validate/alphabetic.ts)                         | Returns `true` if `value` only contains alphabetic characters                     |
+| [`isValidAlphabeticwithspaces`](src/validate/alphabeticWithSpaces.ts)     | Returns `true` if `value` only contains alphabetic characters and/or spaces       |
+| [`isValidAlphanumeric`](src/validate/alphanumeric.ts)                     | Returns `true` if `value` only contains alphanumeric characters                   |
+| [`isValidAlphanumericwithspaces`](src/validate/alphanumericWithSpaces.ts) | Returns `true` if `value` only contains alphanumeric characters and/or spaces     |
+| [`isValidCurrency`](src/validate/currency.ts)                             | Returns `true` if `value` is a valid USD currency-formatted string                |
+| [`isValidEmail`](src/validate/email.ts)                                   | Returns `true` if `value` is a valid email address (see [RFC 5322][rfc-5322])     |
+| [`isValidHandle`](src/validate/handle.ts)                                 | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)    |
+| [`isValidID`](src/validate/id.ts)                                         | Returns `true` if `value` only contains alphanumeric chars, `_`, `-`, or `#`      |
+| [`isValidJsonString`](src/validate/jsonString.ts)                         | Returns `true` is `value` only contains valid JSON characters                     |
+| [`isValidNumeric`](src/validate/numeric.ts)                               | Returns `true` if `value` only contains numeric characters                        |
+| [`isValidPassword`](src/validate/password.ts)                             | Returns `true` if `value` is a valid password (see jsdoc for details)             |
+| [`isValidPhone`](src/validate/phone.ts)                                   | Returns `true` if `value` is a valid string of US phone number _DIGITS_           |
+| [`isValidToken`](src/validate/token.ts)                                   | Returns `true` if `value` only contains alphanumeric characters, `.`, `/`, or `+` |
+| [`isValidURL`](src/validate/url.ts)                                       | Returns `true` if `value` is a valid absolute HTTP/S URL                          |
 
 ## 🤝 Contributing
 
-Pull requests are welcome! Before you begin, please check existing [GitHub Issues](https://github.com/<REPO_OWNER>/<REPO_NAME>/issues) and [Pull Requests](https://github.com/<REPO_OWNER>/<REPO_NAME>/pulls) to see if your idea is already in the pipeline. If not, [here's a guide on how to contribute to this project](./CONTRIBUTING.md). Thank you!
+Pull requests are welcome! Before you begin, please check existing [GitHub Issues](https://github.com/Nerdware-LLC/ts-string-helpers/issues) and [Pull Requests](https://github.com/Nerdware-LLC/ts-string-helpers/pulls) to see if your idea is already in the pipeline. If not, [here's a guide on how to contribute to this project](./CONTRIBUTING.md). Thank you!
 
 ## 📝 License
 

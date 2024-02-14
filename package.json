@@ -1,12 +1,20 @@
 {
-  "name": "<NPM_PKG_NAME>",
+  "name": "@nerdware/ts-string-helpers",
   "version": "1.0.0",
-  "description": "<REPO_DESCRIPTION>",
+  "description": "TypeScript string utils for sanitization, validation, and formatting.",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Trevor Anderson",
+    "email": "trevor@nerdware.cloud"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "validation",
+    "sanitization",
+    "formatting",
+    "utilities",
+    "utils",
+    "tools"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">=16.0.0",
@@ -25,11 +33,11 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/<REPO_OWNER>/<REPO_NAME>.git"
+    "url": "https://github.com/Nerdware-LLC/ts-string-helpers.git"
   },
-  "homepage": "https://github.com/<REPO_OWNER>/<REPO_NAME>#readme",
+  "homepage": "https://github.com/Nerdware-LLC/ts-string-helpers#readme",
   "bugs": {
-    "url": "https://github.com/<REPO_OWNER>/<REPO_NAME>/issues"
+    "url": "https://github.com/Nerdware-LLC/ts-string-helpers/issues"
   },
   "scripts": {
     "lint": "eslint src",
@@ -44,5 +52,23 @@
     "@serverless-guru/prettier-plugin-import-order": {
       "prettier": "^3"
     }
+  },
+  "devDependencies": {
+    "@serverless-guru/prettier-plugin-import-order": "^0.4.2",
+    "@types/node": "^20.11.17",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
+    "@typescript-eslint/parser": "^7.0.1",
+    "@vitest/coverage-v8": "^1.2.2",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-vitest": "^0.3.22",
+    "prettier": "^3.2.5",
+    "type-fest": "^4.10.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.2",
+    "vitest-github-actions-reporter": "^0.11.1"
   }
 }

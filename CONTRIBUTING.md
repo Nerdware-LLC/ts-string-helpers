@@ -2,7 +2,7 @@
 
 First, thank you for your input!
 
-Before you begin, please check existing [GitHub Issues](https://github.com/<REPO_OWNER>/<REPO_NAME>/issues) and [Pull Requests](https://github.com/<REPO_OWNER>/<REPO_NAME>/pulls) to see if your idea is already in the pipeline. If not, consider [creating an issue](https://github.com/<REPO_OWNER>/<REPO_NAME>/issues/new/choose), or sending an email to [trevor@nerdware.cloud](mailto:trevor@nerdware.cloud) before submitting your change.
+Before you begin, please check existing [GitHub Issues](https://github.com/Nerdware-LLC/ts-string-helpers/issues) and [Pull Requests](https://github.com/Nerdware-LLC/ts-string-helpers/pulls) to see if your idea is already in the pipeline. If not, consider [creating an issue](https://github.com/Nerdware-LLC/ts-string-helpers/issues/new/choose), or sending an email to [trevor@nerdware.cloud](mailto:trevor@nerdware.cloud) before submitting your change.
 
 - [Getting Started](#getting-started)
 - [Commit Messages](#commit-messages)

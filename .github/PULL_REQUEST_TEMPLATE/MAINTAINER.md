@@ -4,9 +4,9 @@ Merge changes from [<!-- src git tag here (e.g., "v1.2.3") -->][src-tag] into [m
 
 Details regarding the included changes are provided in the [release notes][src-tag] and the [CHANGELOG][main-changelog].
 
-[src-tag]: https://github.com/<REPO_OWNER>/<REPO_NAME>/releases/tag/<!-- src git tag here (e.g., "v1.2.3") -->
+[src-tag]: https://github.com/Nerdware-LLC/ts-string-helpers/releases/tag/<!-- src git tag here (e.g., "v1.2.3") -->
 
 <!-- DEFAULT DEST: main branch -->
 
-[main-branch]: https://github.com/<REPO_OWNER>/<REPO_NAME>/tree/main
-[main-changelog]: https://github.com/<REPO_OWNER>/<REPO_NAME>/tree/main/CHANGELOG.md
+[main-branch]: https://github.com/Nerdware-LLC/ts-string-helpers/tree/main
+[main-changelog]: https://github.com/Nerdware-LLC/ts-string-helpers/tree/main/CHANGELOG.md
