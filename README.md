@@ -127,7 +127,7 @@ app.post("/register", (req, res, next) => {
 | [`isValidCurrency`](src/validate/currency.ts)                             | Returns `true` if `value` is a valid USD currency-formatted string                |
 | [`isValidEmail`](src/validate/email.ts)                                   | Returns `true` if `value` is a valid email address (see [RFC 5322][rfc-5322])     |
 | [`isValidHandle`](src/validate/handle.ts)                                 | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)    |
-| [`isValidID`](src/validate/id.ts)                                         | Returns `true` if `value` only contains alphanumeric chars, `_`, `-`, or `#`      |
+| [`isValidID`](src/validate/id.ts)                                         | Returns `true` if `value` only contains alphanumeric characters, `_`, `-`, or `#` |
 | [`isValidJsonString`](src/validate/jsonString.ts)                         | Returns `true` is `value` only contains valid JSON characters                     |
 | [`isValidNumeric`](src/validate/numeric.ts)                               | Returns `true` if `value` only contains numeric characters                        |
 | [`isValidPassword`](src/validate/password.ts)                             | Returns `true` if `value` is a valid password (see jsdoc for details)             |

@@ -17,8 +17,8 @@ export const isValidEmail = getRegexValidatorFn([
    * - Ensures the value does not begin with a period, and does not contain 2+ consecutive periods.
    * - Ensures the number of characters before the `@` is between 1-64.
    * - Ensures the number of characters after the `@` is between 1-255.
-   * - Ensures the substring before the `@` only contains alphanumeric chars or . _ % + -
-   * - Ensures the substring after the `@` only contains alphanumeric chars or . _
+   * - Ensures the substring before the `@` only contains alphanumeric characters or . _ % + -
+   * - Ensures the substring after the `@` only contains alphanumeric characters or . _
    * - Ensures the TLD only contains letters, and is between 2-64 characters in length.
    */
   /^(?!.*\.{2,})(?!^\.)[a-zA-Z0-9._%+-]{1,64}@[a-zA-Z0-9.-]{1,255}\.[a-zA-Z]{2,64}$/,
