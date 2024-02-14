@@ -16,7 +16,7 @@ export default defineConfig({
     reporters: ["default", ...(process.env.GITHUB_ACTIONS ? [new GithubActionsReporter()] : [])],
     coverage: {
       include: ["src/**/*.{js,ts}"],
-      exclude: [...coverageConfigDefaults.exclude, "**/tests/**/*", "**/__mocks__/**/*"],
+      exclude: [...coverageConfigDefaults.exclude, "**/index.ts"],
       reporter: [
         ...coverageConfigDefaults.reporter,
         "json-summary", // <-- used by vitest-coverage-report GitHub Action
