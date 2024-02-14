@@ -101,9 +101,9 @@ app.post("/register", (req, res, next) => {
 | Function                                                                   | Description                                                                                |
 | :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
 | [`sanitizeAlphabetic`](src/sanitize/alphabetic.ts)                         | Strips non-alphabetic characters                                                           |
-| [`sanitizeAlphabeticwithspaces`](src/sanitize/alphabeticWithSpaces.ts)     | Strips non-alphabetic/space characters                                                     |
+| [`sanitizeAlphabeticWithSpaces`](src/sanitize/alphabeticWithSpaces.ts)     | Strips non-alphabetic/space characters                                                     |
 | [`sanitizeAlphanumeric`](src/sanitize/alphanumeric.ts)                     | Strips non-alphanumeric characters                                                         |
-| [`sanitizeAlphanumericwithspaces`](src/sanitize/alphanumericWithSpaces.ts) | Strips non-alphanumeric/space characters                                                   |
+| [`sanitizeAlphanumericWithSpaces`](src/sanitize/alphanumericWithSpaces.ts) | Strips non-alphanumeric/space characters                                                   |
 | [`sanitizeEmail`](src/sanitize/email.ts)                                   | Strips invalid email characters (see [RFC 5322][rfc-5322])                                 |
 | [`sanitizeHandle`](src/sanitize/handle.ts)                                 | Strips invalid social-handle characters                                                    |
 | [`sanitizeID`](src/sanitize/id.ts)                                         | Strips non-alphanumeric characters which are not `_`, `-`, or `#`                          |
@@ -121,9 +121,9 @@ app.post("/register", (req, res, next) => {
 | Function                                                                  | Description                                                                       |
 | :------------------------------------------------------------------------ | :-------------------------------------------------------------------------------- |
 | [`isValidAlphabetic`](src/validate/alphabetic.ts)                         | Returns `true` if `value` only contains alphabetic characters                     |
-| [`isValidAlphabeticwithspaces`](src/validate/alphabeticWithSpaces.ts)     | Returns `true` if `value` only contains alphabetic characters and/or spaces       |
+| [`isValidAlphabeticWithSpaces`](src/validate/alphabeticWithSpaces.ts)     | Returns `true` if `value` only contains alphabetic characters and/or spaces       |
 | [`isValidAlphanumeric`](src/validate/alphanumeric.ts)                     | Returns `true` if `value` only contains alphanumeric characters                   |
-| [`isValidAlphanumericwithspaces`](src/validate/alphanumericWithSpaces.ts) | Returns `true` if `value` only contains alphanumeric characters and/or spaces     |
+| [`isValidAlphanumericWithSpaces`](src/validate/alphanumericWithSpaces.ts) | Returns `true` if `value` only contains alphanumeric characters and/or spaces     |
 | [`isValidCurrency`](src/validate/currency.ts)                             | Returns `true` if `value` is a valid USD currency-formatted string                |
 | [`isValidEmail`](src/validate/email.ts)                                   | Returns `true` if `value` is a valid email address (see [RFC 5322][rfc-5322])     |
 | [`isValidHandle`](src/validate/handle.ts)                                 | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)    |
