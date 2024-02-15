@@ -29,13 +29,21 @@
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
     },
-    "./*": {
-      "import": "./dist/esm/*/index.js",
-      "require": "./dist/cjs/*/index.js"
+    "./sanitize": {
+      "import": "./dist/esm/sanitize/index.js",
+      "require": "./dist/cjs/sanitize/index.js"
     },
-    "./*/": {
-      "import": "./dist/esm/*/",
-      "require": "./dist/cjs/*/"
+    "./validate": {
+      "import": "./dist/esm/validate/index.js",
+      "require": "./dist/cjs/validate/index.js"
+    },
+    "./sanitize/*": {
+      "import": "./dist/esm/sanitize/*",
+      "require": "./dist/cjs/sanitize/*"
+    },
+    "./validate/*": {
+      "import": "./dist/esm/validate/*",
+      "require": "./dist/cjs/validate/*"
     }
   },
   "private": false,
