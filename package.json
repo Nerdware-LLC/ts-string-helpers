@@ -28,6 +28,14 @@
     ".": {
       "import": "./dist/esm/index.js",
       "require": "./dist/cjs/index.js"
+    },
+    "./*": {
+      "import": "./dist/esm/*/index.js",
+      "require": "./dist/cjs/*/index.js"
+    },
+    "./*/": {
+      "import": "./dist/esm/*/",
+      "require": "./dist/cjs/*/"
     }
   },
   "private": false,
