@@ -1,3 +1,4 @@
+export { getSanitizerFn } from "./_helpers";
 export * from "./alphabetic";
 export * from "./alphabeticWithSpaces";
 export * from "./alphanumeric";
