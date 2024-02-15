@@ -1,5 +1,9 @@
-import { ZERO_WIDTH_SPACE, NULL_CONTROL_CHAR, ZERO_WIDTH_AND_CONTROL_CHAR_REGEX } from "./_helpers";
-import { sanitizeAlphabetic } from "./alphabetic";
+import {
+  ZERO_WIDTH_SPACE,
+  NULL_CONTROL_CHAR,
+  ZERO_WIDTH_AND_CONTROL_CHAR_REGEX,
+} from "./_helpers.js";
+import { sanitizeAlphabetic } from "./alphabetic.js";
 
 describe("sanitize: alphabetic", () => {
   test("removes all non-alphabetic characters", () => {

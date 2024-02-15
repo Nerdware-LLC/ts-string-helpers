@@ -1,5 +1,9 @@
-import { ZERO_WIDTH_SPACE, NULL_CONTROL_CHAR, ZERO_WIDTH_AND_CONTROL_CHAR_REGEX } from "./_helpers";
-import { sanitizePassword } from "./password";
+import {
+  ZERO_WIDTH_SPACE,
+  NULL_CONTROL_CHAR,
+  ZERO_WIDTH_AND_CONTROL_CHAR_REGEX,
+} from "./_helpers.js";
+import { sanitizePassword } from "./password.js";
 
 describe("sanitize: password", () => {
   test("removes all disallowed password characters", () => {

@@ -1,4 +1,4 @@
-import { isValidAlphabetic } from "./alphabetic";
+import { isValidAlphabetic } from "./alphabetic.js";
 
 describe("validate: alphabetic", () => {
   // POSITIVE TEST CASES:

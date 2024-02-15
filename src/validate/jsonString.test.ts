@@ -1,4 +1,4 @@
-import { isValidJsonString } from "./jsonString";
+import { isValidJsonString } from "./jsonString.js";
 
 describe("validate: jsonString", () => {
   // POSITIVE TEST CASES:

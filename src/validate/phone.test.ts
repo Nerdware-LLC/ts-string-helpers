@@ -1,4 +1,4 @@
-import { isValidPhone } from "./phone";
+import { isValidPhone } from "./phone.js";
 
 describe("validate: phone", () => {
   // POSITIVE TEST CASES:

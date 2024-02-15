@@ -1,4 +1,4 @@
-import { isValidAlphanumeric } from "./alphanumeric";
+import { isValidAlphanumeric } from "./alphanumeric.js";
 
 describe("validate: alphanumeric", () => {
   // POSITIVE TEST CASES:

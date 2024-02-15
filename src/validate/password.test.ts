@@ -1,4 +1,4 @@
-import { isValidPassword } from "./password";
+import { isValidPassword } from "./password.js";
 
 describe("validate: password", () => {
   // POSITIVE TEST CASES:

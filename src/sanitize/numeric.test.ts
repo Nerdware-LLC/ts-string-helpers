@@ -1,5 +1,9 @@
-import { ZERO_WIDTH_SPACE, NULL_CONTROL_CHAR, ZERO_WIDTH_AND_CONTROL_CHAR_REGEX } from "./_helpers";
-import { sanitizeNumeric } from "./numeric";
+import {
+  ZERO_WIDTH_SPACE,
+  NULL_CONTROL_CHAR,
+  ZERO_WIDTH_AND_CONTROL_CHAR_REGEX,
+} from "./_helpers.js";
+import { sanitizeNumeric } from "./numeric.js";
 
 describe("sanitize: numeric", () => {
   test("removes all non-numeric characters", () => {

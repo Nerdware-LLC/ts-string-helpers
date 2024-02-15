@@ -1,5 +1,9 @@
-import { ZERO_WIDTH_SPACE, NULL_CONTROL_CHAR, ZERO_WIDTH_AND_CONTROL_CHAR_REGEX } from "./_helpers";
-import { sanitizeHandle } from "./handle";
+import {
+  ZERO_WIDTH_SPACE,
+  NULL_CONTROL_CHAR,
+  ZERO_WIDTH_AND_CONTROL_CHAR_REGEX,
+} from "./_helpers.js";
+import { sanitizeHandle } from "./handle.js";
 
 describe("sanitize: handle", () => {
   test("removes all non-handle characters", () => {

@@ -1,4 +1,4 @@
-import { isValidCurrency } from "./currency";
+import { isValidCurrency } from "./currency.js";
 
 describe("validate: currency", () => {
   // prettier-ignore

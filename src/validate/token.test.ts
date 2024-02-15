@@ -1,4 +1,4 @@
-import { isValidToken } from "./token";
+import { isValidToken } from "./token.js";
 
 describe("validate: token", () => {
   // POSITIVE TEST CASES:

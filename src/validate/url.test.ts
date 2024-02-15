@@ -1,4 +1,4 @@
-import { isValidURL } from "./url";
+import { isValidURL } from "./url.js";
 
 describe("validate: url", () => {
   // POSITIVE TEST CASES:

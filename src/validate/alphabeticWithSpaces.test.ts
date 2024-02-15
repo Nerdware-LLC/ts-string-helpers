@@ -1,4 +1,4 @@
-import { isValidAlphabeticWithSpaces } from "./alphabeticWithSpaces";
+import { isValidAlphabeticWithSpaces } from "./alphabeticWithSpaces.js";
 
 describe("validate: alphabeticWithSpaces", () => {
   // POSITIVE TEST CASES:

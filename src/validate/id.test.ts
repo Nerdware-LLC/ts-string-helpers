@@ -1,4 +1,4 @@
-import { isValidID } from "./id";
+import { isValidID } from "./id.js";
 
 describe("validate: id", () => {
   // POSITIVE TEST CASES:

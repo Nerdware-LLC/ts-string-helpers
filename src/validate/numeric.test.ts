@@ -1,4 +1,4 @@
-import { isValidNumeric } from "./numeric";
+import { isValidNumeric } from "./numeric.js";
 
 describe("validate: numeric", () => {
   // POSITIVE TEST CASES:

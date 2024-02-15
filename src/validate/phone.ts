@@ -1,4 +1,4 @@
-import { getRegexValidatorFn } from "./_helpers";
+import { getRegexValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` is a valid string of US phone number _DIGITS_

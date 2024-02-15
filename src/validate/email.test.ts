@@ -1,4 +1,4 @@
-import { isValidEmail } from "./email";
+import { isValidEmail } from "./email.js";
 
 describe("validate: email", () => {
   // POSITIVE TEST CASES:

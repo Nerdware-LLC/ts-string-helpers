@@ -1,4 +1,4 @@
-import { isValidHandle } from "./handle";
+import { isValidHandle } from "./handle.js";
 
 describe("validate: handle", () => {
   // POSITIVE TEST CASES:
