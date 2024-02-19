@@ -1,7 +1,7 @@
 {
-  // This base tsconfig is used for development of the project's src files.
+  // This base tsconfig is used for development.
 
-  "include": ["src"],
+  "include": ["src", "./*.ts"],
 
   "compilerOptions": {
     // Language and Environment:
