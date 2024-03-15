@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+# [1.2.0](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.1.2...v1.2.0) (2024-03-15)
+
+
+### Features
+
+* add base64 sanitizer ([81849b8](https://github.com/Nerdware-LLC/ts-string-helpers/commit/81849b84b7547b1697b8468dd8e4467e20aa9f80))
+* add base64 validator ([9874d6f](https://github.com/Nerdware-LLC/ts-string-helpers/commit/9874d6fd388ee17cfdbc29e341bb6e4ade00f53e))
+
 ## [1.1.2](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.1.1...v1.1.2) (2024-02-19)
 
 ## [1.1.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.1.0...v1.1.1) (2024-02-15)
