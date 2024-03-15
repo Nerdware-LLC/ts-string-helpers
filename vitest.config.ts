@@ -12,10 +12,10 @@ export default defineConfig({
     globals: true,
     silent: true,
     environment: "node",
-    include: ["**/?(*.){test,spec}.?(c|m)[tj]s?(x)"],
+    include: ["**/?(*.)test.ts"],
     reporters: ["default", ...(process.env.GITHUB_ACTIONS ? [new GithubActionsReporter()] : [])],
     coverage: {
-      include: ["src/**/*.{js,ts}"],
+      include: ["src/**/*.ts"],
       exclude: [...coverageConfigDefaults.exclude, "**/index.ts"],
       reporter: [
         ...coverageConfigDefaults.reporter,
