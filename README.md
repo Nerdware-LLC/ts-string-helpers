@@ -104,6 +104,7 @@ app.post("/register", (req, res, next) => {
 | [`sanitizeAlphabeticWithSpaces`](src/sanitize/alphabeticWithSpaces.ts)     | Strips non-alphabetic/space characters                                                     |
 | [`sanitizeAlphanumeric`](src/sanitize/alphanumeric.ts)                     | Strips non-alphanumeric characters                                                         |
 | [`sanitizeAlphanumericWithSpaces`](src/sanitize/alphanumericWithSpaces.ts) | Strips non-alphanumeric/space characters                                                   |
+| [`sanitizeBase64`](src/sanitize/base64.ts)                                 | Strips invalid base64 characters                                                           |
 | [`sanitizeEmail`](src/sanitize/email.ts)                                   | Strips invalid email characters (see [RFC 5322][rfc-5322])                                 |
 | [`sanitizeHandle`](src/sanitize/handle.ts)                                 | Strips invalid social-handle characters                                                    |
 | [`sanitizeID`](src/sanitize/id.ts)                                         | Strips non-alphanumeric characters which are not `_`, `-`, or `#`                          |
@@ -124,6 +125,7 @@ app.post("/register", (req, res, next) => {
 | [`isValidAlphabeticWithSpaces`](src/validate/alphabeticWithSpaces.ts)     | Returns `true` if `value` only contains alphabetic characters and/or spaces       |
 | [`isValidAlphanumeric`](src/validate/alphanumeric.ts)                     | Returns `true` if `value` only contains alphanumeric characters                   |
 | [`isValidAlphanumericWithSpaces`](src/validate/alphanumericWithSpaces.ts) | Returns `true` if `value` only contains alphanumeric characters and/or spaces     |
+| [`isValidBase64`](src/validate/base64.ts)                                 | Returns `true` if `value` is a valid base64 string                                |
 | [`isValidCurrency`](src/validate/currency.ts)                             | Returns `true` if `value` is a valid USD currency-formatted string                |
 | [`isValidEmail`](src/validate/email.ts)                                   | Returns `true` if `value` is a valid email address (see [RFC 5322][rfc-5322])     |
 | [`isValidHandle`](src/validate/handle.ts)                                 | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)    |
