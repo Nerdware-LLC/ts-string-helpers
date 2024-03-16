@@ -3,6 +3,7 @@ export * from "./alphabetic.js";
 export * from "./alphabeticWithSpaces.js";
 export * from "./alphanumeric.js";
 export * from "./alphanumericWithSpaces.js";
+export * from "./base64.js";
 export * from "./currency.js";
 export * from "./email.js";
 export * from "./handle.js";
