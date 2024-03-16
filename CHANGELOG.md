@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.2.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.2.0...v1.2.1) (2024-03-16)
+
+
+### Bug Fixes
+
+* add base64 exports to index files ([22156ad](https://github.com/Nerdware-LLC/ts-string-helpers/commit/22156adbba7e21210bfc3b2079895fd4cb3d5147))
+
 # [1.2.0](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.1.2...v1.2.0) (2024-03-15)
 
 
