@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+# [1.4.0](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.3.0...v1.4.0) (2024-04-25)
+
+
+### Features
+
+* add hexadecimal sanitizer+validator fns ([491c15a](https://github.com/Nerdware-LLC/ts-string-helpers/commit/491c15a50d2d343ab1110102ac6b0f5f7ad080f0))
+
 # [1.3.0](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.2.5...v1.3.0) (2024-04-25)
 
 
