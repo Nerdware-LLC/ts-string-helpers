@@ -8,6 +8,7 @@ export * from "./base64URL.js";
 export * from "./currency.js";
 export * from "./email.js";
 export * from "./handle.js";
+export * from "./hexadecimal.js";
 export * from "./id.js";
 export * from "./jsonString.js";
 export * from "./jwt.js";

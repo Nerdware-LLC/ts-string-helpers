@@ -108,6 +108,7 @@ app.post("/register", (req, res, next) => {
 | [`sanitizeBase64URL`](src/sanitize/base64URL.ts)                           | Removes invalid base64URL characters                                                        |
 | [`sanitizeEmail`](src/sanitize/email.ts)                                   | Removes invalid email characters (see [RFC 5322][rfc-5322])                                 |
 | [`sanitizeHandle`](src/sanitize/handle.ts)                                 | Removes invalid social-handle characters                                                    |
+| [`sanitizeHex`](src/sanitize/hexadecimal.ts)                               | Removes non-hexadecimal characters                                                          |
 | [`sanitizeID`](src/sanitize/id.ts)                                         | Removes non-alphanumeric characters which are not `_`, `-`, or `#`                          |
 | [`sanitizeJsonString`](src/sanitize/jsonString.ts)                         | Removes characters which are not valid in stringified JSON                                  |
 | [`sanitizeJWT`](src/sanitize/jwt.ts)                                       | Removes characters which are not valid in a JSON Web Token                                  |
@@ -131,6 +132,7 @@ app.post("/register", (req, res, next) => {
 | [`isValidCurrency`](src/validate/currency.ts)                             | Returns `true` if `value` is a valid USD currency-formatted string                |
 | [`isValidEmail`](src/validate/email.ts)                                   | Returns `true` if `value` is a valid email address (see [RFC 5322][rfc-5322])     |
 | [`isValidHandle`](src/validate/handle.ts)                                 | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)    |
+| [`isValidHex`](src/validate/hexadecimal.ts)                               | Returns `true` if `value` only contains hexadecimal characters                    |
 | [`isValidID`](src/validate/id.ts)                                         | Returns `true` if `value` only contains alphanumeric characters, `_`, `-`, or `#` |
 | [`isValidJsonString`](src/validate/jsonString.ts)                         | Returns `true` is `value` only contains valid JSON characters                     |
 | [`isValidJWT`](src/validate/token.ts)                                     | Returns `true` if `value` only contains valid JSON Web Token characters           |
