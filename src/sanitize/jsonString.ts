@@ -1,7 +1,7 @@
 import { getSanitizerFn } from "./_helpers.js";
 
 /**
- * Remove non-JSON characters from `str`.
+ * Removes non-JSON characters from `str`.
  */
 export const sanitizeJsonString = getSanitizerFn(
   /**

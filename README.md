@@ -98,22 +98,23 @@ app.post("/register", (req, res, next) => {
 
 ### Sanitizers
 
-| Function                                                                   | Description                                                                                |
-| :------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------- |
-| [`sanitizeAlphabetic`](src/sanitize/alphabetic.ts)                         | Strips non-alphabetic characters                                                           |
-| [`sanitizeAlphabeticWithSpaces`](src/sanitize/alphabeticWithSpaces.ts)     | Strips non-alphabetic/space characters                                                     |
-| [`sanitizeAlphanumeric`](src/sanitize/alphanumeric.ts)                     | Strips non-alphanumeric characters                                                         |
-| [`sanitizeAlphanumericWithSpaces`](src/sanitize/alphanumericWithSpaces.ts) | Strips non-alphanumeric/space characters                                                   |
-| [`sanitizeBase64`](src/sanitize/base64.ts)                                 | Strips invalid base64 characters                                                           |
-| [`sanitizeEmail`](src/sanitize/email.ts)                                   | Strips invalid email characters (see [RFC 5322][rfc-5322])                                 |
-| [`sanitizeHandle`](src/sanitize/handle.ts)                                 | Strips invalid social-handle characters                                                    |
-| [`sanitizeID`](src/sanitize/id.ts)                                         | Strips non-alphanumeric characters which are not `_`, `-`, or `#`                          |
-| [`sanitizeJsonString`](src/sanitize/jsonString.ts)                         | Strips invalid JSON characters                                                             |
-| [`sanitizeNumeric`](src/sanitize/numeric.ts)                               | Strips non-numeric characters                                                              |
-| [`sanitizePassword`](src/sanitize/password.ts)                             | Strips non-alphanumeric characters which are not `!`, `@`, `#`, `$`, `%`, `^`, `&`, or `*` |
-| [`sanitizePhone`](src/sanitize/phone.ts)                                   | Alias of [`sanitizeNumeric`](src/sanitize/numeric.ts)                                      |
-| [`sanitizeToken`](src/sanitize/token.ts)                                   | Strips non-alphanumeric characters which are not `.`, `/`, or `+`                          |
-| [`sanitizeURL`](src/sanitize/url.ts)                                       | Strips invalid URL characters                                                              |
+| Function                                                                   | Description                                                                                 |
+| :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------ |
+| [`sanitizeAlphabetic`](src/sanitize/alphabetic.ts)                         | Removes non-alphabetic characters                                                           |
+| [`sanitizeAlphabeticWithSpaces`](src/sanitize/alphabeticWithSpaces.ts)     | Removes non-alphabetic/space characters                                                     |
+| [`sanitizeAlphanumeric`](src/sanitize/alphanumeric.ts)                     | Removes non-alphanumeric characters                                                         |
+| [`sanitizeAlphanumericWithSpaces`](src/sanitize/alphanumericWithSpaces.ts) | Removes non-alphanumeric/space characters                                                   |
+| [`sanitizeBase64`](src/sanitize/base64.ts)                                 | Removes invalid base64 characters                                                           |
+| [`sanitizeBase64URL`](src/sanitize/base64URL.ts)                           | Removes invalid base64URL characters                                                        |
+| [`sanitizeEmail`](src/sanitize/email.ts)                                   | Removes invalid email characters (see [RFC 5322][rfc-5322])                                 |
+| [`sanitizeHandle`](src/sanitize/handle.ts)                                 | Removes invalid social-handle characters                                                    |
+| [`sanitizeID`](src/sanitize/id.ts)                                         | Removes non-alphanumeric characters which are not `_`, `-`, or `#`                          |
+| [`sanitizeJsonString`](src/sanitize/jsonString.ts)                         | Removes characters which are not valid in stringified JSON                                  |
+| [`sanitizeJWT`](src/sanitize/jwt.ts)                                       | Removes characters which are not valid in a JSON Web Token                                  |
+| [`sanitizeNumeric`](src/sanitize/numeric.ts)                               | Removes non-numeric characters                                                              |
+| [`sanitizePassword`](src/sanitize/password.ts)                             | Removes non-alphanumeric characters which are not `!`, `@`, `#`, `$`, `%`, `^`, `&`, or `*` |
+| [`sanitizePhone`](src/sanitize/phone.ts)                                   | Alias of [`sanitizeNumeric`](src/sanitize/numeric.ts)                                       |
+| [`sanitizeURL`](src/sanitize/url.ts)                                       | Removes invalid URL characters                                                              |
 
 [rfc-5322]: https://datatracker.ietf.org/doc/html/rfc5322
 
@@ -126,15 +127,16 @@ app.post("/register", (req, res, next) => {
 | [`isValidAlphanumeric`](src/validate/alphanumeric.ts)                     | Returns `true` if `value` only contains alphanumeric characters                   |
 | [`isValidAlphanumericWithSpaces`](src/validate/alphanumericWithSpaces.ts) | Returns `true` if `value` only contains alphanumeric characters and/or spaces     |
 | [`isValidBase64`](src/validate/base64.ts)                                 | Returns `true` if `value` is a valid base64 string                                |
+| [`isValidBase64URL`](src/validate/base64URL.ts)                           | Returns `true` if `value` is a valid base64URL string                             |
 | [`isValidCurrency`](src/validate/currency.ts)                             | Returns `true` if `value` is a valid USD currency-formatted string                |
 | [`isValidEmail`](src/validate/email.ts)                                   | Returns `true` if `value` is a valid email address (see [RFC 5322][rfc-5322])     |
 | [`isValidHandle`](src/validate/handle.ts)                                 | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)    |
 | [`isValidID`](src/validate/id.ts)                                         | Returns `true` if `value` only contains alphanumeric characters, `_`, `-`, or `#` |
 | [`isValidJsonString`](src/validate/jsonString.ts)                         | Returns `true` is `value` only contains valid JSON characters                     |
+| [`isValidJWT`](src/validate/token.ts)                                     | Returns `true` if `value` only contains valid JSON Web Token characters           |
 | [`isValidNumeric`](src/validate/numeric.ts)                               | Returns `true` if `value` only contains numeric characters                        |
 | [`isValidPassword`](src/validate/password.ts)                             | Returns `true` if `value` is a valid password (see jsdoc for details)             |
 | [`isValidPhone`](src/validate/phone.ts)                                   | Returns `true` if `value` is a valid string of US phone number _DIGITS_           |
-| [`isValidToken`](src/validate/token.ts)                                   | Returns `true` if `value` only contains alphanumeric characters, `.`, `/`, or `+` |
 | [`isValidURL`](src/validate/url.ts)                                       | Returns `true` if `value` is a valid absolute HTTP/S URL                          |
 
 ## 🤝 Contributing
