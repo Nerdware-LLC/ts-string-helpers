@@ -62,10 +62,10 @@ yarn add @nerdware/ts-string-helpers
 
 ### 🛠️ Usage
 
-Here's a simple example of how to use the `sanitizeEmail` and `validateEmail` functions to sanitize and validate an email address before using it in a NodeJS Express route:
+Here's a simple example of how to use the `sanitizeEmail` and `isValidEmail` functions to sanitize and validate an email address before using it in a NodeJS Express route:
 
 ```typescript
-import { sanitizeEmail, validateEmail } from "@nerdware/ts-string-helpers";
+import { sanitizeEmail, isValidEmail } from "@nerdware/ts-string-helpers";
 import express from "express";
 import { UserModel } from "./models/my-user-model";
 
@@ -80,7 +80,7 @@ app.post("/register", (req, res, next) => {
   const userEmail = sanitizeEmail(req.body.email);
 
   // Validate the sanitized email
-  if (!validateEmail(userEmail)) {
+  if (!isValidEmail(userEmail)) {
     return res.status(400).send("Invalid email address");
   }
 
@@ -93,7 +93,7 @@ app.post("/register", (req, res, next) => {
 
 ## ⚙️ API
 
-> [!TIP] Tip
+> [!TIP]
 > In the tables below, click on a function to view the exact regex pattern it uses. The more complex patterns are accompanied by in-source documentation/explanations.
 
 ### Sanitizers
