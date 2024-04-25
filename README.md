@@ -40,9 +40,9 @@
 
 This package provides a lightweight set of TypeScript utils to `sanitize` and `validate` strings in any environment.
 
-For each `sanitize` function, reverse-regex patterns are used to strip unwanted characters from strings — _even pesky zero-width control characters_ — leaving only the characters you want. This is useful for sanitizing user input and other untrusted data.
+The `sanitize` functions use reverse-regex patterns to strip unwanted characters from strings — _even pesky zero-width control characters_ — leaving only the characters you want. This is useful for sanitizing user input and other untrusted data.
 
-Each `sanitize` method, there's a corresponding `validate` function to ensure strings match a specific format.
+For each `sanitize` function, there's a corresponding `validate` function to ensure strings match a specific format.
 
 ### 📦 Installation
 
