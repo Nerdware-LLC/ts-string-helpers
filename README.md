@@ -95,6 +95,8 @@ app.post("/register", (req, res, next) => {
 
 > [!TIP]
 > In the tables below, click on a function to view the exact regex pattern it uses. The more complex patterns are accompanied by in-source documentation/explanations.
+>
+> All functions with the _Alpha_ infix (e.g., `sanitizeAlphabetic`) are case-insensitive, and only permit [ASCII characters](https://www.asciitable.com/). Unicode/i18n support may be added in the future.
 
 ### Sanitizers
 
