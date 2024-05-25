@@ -7,7 +7,7 @@
  * @returns A function that takes a string input and returns the sanitized string.
  */
 export const getSanitizerFn = (regex: RegExp) => {
-  return (str: string): string => str.replace(regex, "").trim();
+  return (str: string): string => str.replace(regex, "");
 };
 
 /** Regex pattern for testing `sanitize` functions which matches all zero-width characters and ASCII/unicode control characters. @internal */
