@@ -10,7 +10,8 @@ on:
 permissions:
   attestations: write #  to generate artifact attestations for dist assets
   contents: write #      to checkout the code and create a release
-  id-token: write #      to publish to npm using OIDC
+  id-token: write #      to enable use of OIDC for npm provenance
+  issues: write #        to be able to comment on released issues
   pull-requests: write # to add coverage reports to a PR
   statuses: write #      to update commit status
 
@@ -31,10 +32,10 @@ jobs:
     if: needs.test.outputs.success == 'true'
     runs-on: ubuntu-latest
     permissions:
-      contents: write # to create a release
-    outputs:
-      new_release_published: ${{ steps.semantic-release.outputs.new_release_published }}
-      new_release_git_tag: ${{ steps.semantic-release.outputs.new_release_git_tag }}
+      attestations: write # to generate artifact attestations for dist assets
+      contents: write #     to create a release
+      id-token: write #     to enable use of OIDC for npm provenance
+      issues: write #       to be able to comment on released issues
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,36 +49,5 @@ jobs:
             @semantic-release/changelog@6.0.3
             @semantic-release/git@10.0.1
         env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_PUBLISH_PUBLIC_ORG_SCOPE }}
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_TOKEN }}
-
-  publish:
-    name: Publish
-    needs: release # only publish if a release was created
-    if: needs.release.outputs.new_release_published == 'true'
-    runs-on: ubuntu-latest
-    permissions:
-      attestations: write # to generate artifact attestations for dist assets
-      contents: read #      to checkout the code
-      id-token: write #     to publish to npm using OIDC
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version-file: ".nvmrc"
-          registry-url: "https://registry.npmjs.org"
-      - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN_PUBLISH_PUBLIC_ORG_SCOPE }}
-        run: |
-          npm ci --include=dev
-          npm run build
-
-          latest_or_next_tag=$(
-              [[ ${{ needs.release.outputs.new_release_git_tag }} =~ next ]] &&
-                  echo 'next' ||
-                  echo 'latest'
-          )
-
-          npm publish --provenance --access public \
-              --tag ${{ github.ref }} \
-              --tag $latest_or_next_tag
