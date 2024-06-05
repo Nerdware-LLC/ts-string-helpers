@@ -8,8 +8,9 @@ on:
   workflow_dispatch:
 
 permissions:
+  attestations: write #  to generate artifact attestations for dist assets
   contents: write #      to checkout the code and create a release
-  id-token: write #      to publish to npm
+  id-token: write #      to publish to npm using OIDC
   pull-requests: write # to add coverage reports to a PR
   statuses: write #      to update commit status
 
@@ -55,8 +56,9 @@ jobs:
     if: needs.release.outputs.new_release_published == 'true'
     runs-on: ubuntu-latest
     permissions:
-      contents: read
-      id-token: write
+      attestations: write # to generate artifact attestations for dist assets
+      contents: read #      to checkout the code
+      id-token: write #     to publish to npm using OIDC
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
