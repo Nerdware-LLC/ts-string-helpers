@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.4.6](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.5...v1.4.6) (2024-06-05)
+
+
+### Bug Fixes
+
+* add 'git+' prefix to 'repository.url' ([844042b](https://github.com/Nerdware-LLC/ts-string-helpers/commit/844042bc9e4ac75a13fe196a115106bdf527cf38))
+
 ## [1.4.5](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.4...v1.4.5) (2024-06-05)
 
 ## [1.4.4](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.3...v1.4.4) (2024-06-05)
