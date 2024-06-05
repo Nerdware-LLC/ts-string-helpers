@@ -36,7 +36,7 @@ jobs:
         with:
           node-version-file: ".nvmrc"
 
-      - name: Setup Dependencies
+      - name: Install Dependencies
         run: npm ci --include=dev
 
       - name: Run Linters
@@ -45,11 +45,8 @@ jobs:
       - name: Run Tests
         id: run-tests
         run: |
-          npm ci --include=dev
           npm run test:ci
-
-          echo "success=$( [ $? == 0 ] && echo true || echo false )" \
-            >> "$GITHUB_OUTPUT"
+          echo "success=$( [ $? == 0 ] && echo true || echo false )" >> "$GITHUB_OUTPUT"
 
       - name: Upload Test Coverage Reports
         uses: actions/upload-artifact@v4
