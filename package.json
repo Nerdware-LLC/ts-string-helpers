@@ -1,6 +1,6 @@
 {
   "name": "@nerdware/ts-string-helpers",
-  "version": "1.4.4",
+  "version": "1.4.5",
   "description": "TypeScript string utils for sanitization, validation, and formatting.",
   "author": {
     "name": "Trevor Anderson",
