@@ -68,6 +68,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: test-coverage-reports
+          path: .
       - name: (PR-Only) Update PR with Coverage Reports
         if: github.event_name == 'pull_request'
         uses: davelosert/vitest-coverage-report-action@v2
