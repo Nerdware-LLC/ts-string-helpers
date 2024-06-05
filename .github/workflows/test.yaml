@@ -17,7 +17,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read #       to checkout the code
+  contents: write #      to checkout the code and merge dependabot PRs
   pull-requests: write # to add coverage reports to the PR
   statuses: write #      to update commit status
 
@@ -72,18 +72,20 @@ jobs:
     needs: run-tests # only run if tests passed and the event is a PR
     if: needs.run-tests.outputs.success == 'true' && github.event_name == 'pull_request'
     permissions:
-      pull-requests: write # to add coverage reports to the PR
+      contents: write #      to auto-merge dependabot PRs
+      pull-requests: write # to update the PR
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+      - name: Download Test Coverage Reports
+        uses: actions/download-artifact@v4
         with: { name: test-coverage-reports, path: ./coverage }
       - name: Add Vitest Test Coverage Report to PR
         uses: davelosert/vitest-coverage-report-action@v2
       - name: "(dependabot🤖) Approve & Auto-Merge PR"
         if: github.actor == 'dependabot[bot]'
         env:
-          GH_TOKEN: ${{secrets.SEMANTIC_RELEASE_TOKEN}}
-          PR_URL: ${{github.event.pull_request.html_url}}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
         run: |
           gh pr review --approve "$PR_URL"
           gh pr merge --auto --merge "$PR_URL"
