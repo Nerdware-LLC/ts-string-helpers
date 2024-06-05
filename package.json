@@ -49,7 +49,7 @@
     "test:ci": "vitest run --coverage --bail=1 --silent",
     "test:types": "tsc --project tsconfig.json --noEmit --skipLibCheck",
     "prebuild": "[ -d dist ] && rm -rf dist || true",
-    "build": "./scripts/build.sh"
+    "build": "scripts/cicd.build.sh"
   },
   "devDependencies": {
     "@serverless-guru/prettier-plugin-import-order": "^0.4.2",
