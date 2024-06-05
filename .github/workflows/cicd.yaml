@@ -1,4 +1,4 @@
-name: CI/CD Workflow
+name: 📦 CI/CD Workflow
 
 on:
   push:
@@ -17,7 +17,7 @@ permissions:
 
 jobs:
   test:
-    name: Test
+    name: 🧪 Test
     uses: ./.github/workflows/test.yaml
     secrets:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
@@ -27,7 +27,7 @@ jobs:
       statuses: write #      to update commit status
 
   release:
-    name: Release
+    name: 🚀 Release
     needs: test # only release if tests passed
     if: needs.test.outputs.success == 'true'
     runs-on: ubuntu-latest
