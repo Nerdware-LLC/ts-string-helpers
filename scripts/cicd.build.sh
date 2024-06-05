@@ -4,10 +4,10 @@
 
 # Make the ESM build
 npx tsc --project tsconfig.build-esm.json
-echo '{ "type": "module" }' > dist/esm/package.json
+echo '{ "type": "module" }' >dist/esm/package.json
 
 # Make the CJS build
 npx tsc --project tsconfig.build-cjs.json
-echo '{ "type": "commonjs" }' > dist/cjs/package.json
+echo '{ "type": "commonjs" }' >dist/cjs/package.json
 
 ############################################################
