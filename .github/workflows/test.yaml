@@ -54,25 +54,30 @@ jobs:
           name: test-coverage-reports
           path: ./coverage
 
-  report-test-coverage:
-    name: Report Test Coverage
+  update-codecov:
+    name: Update CodeCov
     runs-on: ubuntu-latest
     needs: run-tests # only run if tests passed
     if: needs.run-tests.outputs.success == 'true'
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { name: test-coverage-reports, path: . }
+      - uses: codecov/codecov-action@v4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
+  update-pr-with-coverage-info:
+    name: Update PR with Coverage Reports
+    runs-on: ubuntu-latest
+    needs: run-tests # only run if tests passed and the event is a PR
+    if: needs.run-tests.outputs.success == 'true' && github.event_name == 'pull_request'
     permissions:
       pull-requests: write # to add coverage reports to the PR
     steps:
+      - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
-        with:
-          name: test-coverage-reports
-          path: .
-      - name: (PR-Only) Update PR with Coverage Reports
-        if: github.event_name == 'pull_request'
-        uses: davelosert/vitest-coverage-report-action@v2
-      - name: Update CodeCov
-        uses: codecov/codecov-action@v4
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+        with: { name: test-coverage-reports, path: . }
+      - uses: davelosert/vitest-coverage-report-action@v2
 
   update-github-commit-status:
     name: Update GitHub Commit Status
