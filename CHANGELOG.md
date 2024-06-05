@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.4.4](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.3...v1.4.4) (2024-06-05)
+
 ## [1.4.3](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.2...v1.4.3) (2024-06-05)
 
 ## [1.4.2](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.1...v1.4.2) (2024-05-25)
