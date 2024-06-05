@@ -77,13 +77,6 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with: { name: test-coverage-reports, path: ./coverage }
-      - run: |
-          echo "##########################################################"
-          echo "DEBUG: LISTING FILES"
-          ls -al ./
-          echo "-------------------------------------------------------"
-          ls -al ./coverage
-          echo "##########################################################"
       - uses: davelosert/vitest-coverage-report-action@v2
 
   update-github-commit-status:
