@@ -141,7 +141,8 @@ app.post("/register", (req, res, next) => {
 | [`isValidNumeric`](src/validate/numeric.ts)                               | Returns `true` if `value` only contains numeric characters                        |
 | [`isValidPassword`](src/validate/password.ts)                             | Returns `true` if `value` is a valid password (see jsdoc for details)             |
 | [`isValidPhone`](src/validate/phone.ts)                                   | Returns `true` if `value` is a valid string of US phone number _DIGITS_           |
-| [`isValidURL`](src/validate/url.ts)                                       | Returns `true` if `value` is a valid absolute HTTP/S URL                          |
+| [`isValidURL`](src/validate/url.ts)                                       | Returns `true` if `value` is a valid absolute or relative URL (protocol agnostic) |
+| [`isValidHttpURL`](src/validate/url.ts)                                   | Returns `true` if `value` is a valid absolute HTTP/S URL                          |
 
 ## 🤝 Contributing
 
