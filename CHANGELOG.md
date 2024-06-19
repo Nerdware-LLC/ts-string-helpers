@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+# [1.5.0](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.8...v1.5.0) (2024-06-19)
+
+
+### Features
+
+* add isValidHttpURL ([570cb33](https://github.com/Nerdware-LLC/ts-string-helpers/commit/570cb33ebf86b6d13dfd101ce0024484e4485d5c))
+
 # [1.5.0-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.8...v1.5.0-next.1) (2024-06-18)
 
 
