@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.6.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.6.0...v1.6.1) (2024-06-21)
+
+
+### Bug Fixes
+
+* add exports to index files for sanitize+validate text ([66646de](https://github.com/Nerdware-LLC/ts-string-helpers/commit/66646de94c8ac32034e72de117d9423a21bbd3fb))
+
 ## [1.6.1-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.6.0...v1.6.1-next.1) (2024-06-21)
 
 
