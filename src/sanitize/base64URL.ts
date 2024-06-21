@@ -12,6 +12,8 @@ import { getSanitizerFn } from "./_helpers.js";
  * - No line breaks are used
  *
  * @see https://base64.guru/standards/base64url
+ *
+ * **Pattern Notes:**
+ * - The hyphen literal is at the end of the group to avoid unintentional range creation.
  */
 export const sanitizeBase64URL = getSanitizerFn(/[^a-zA-Z0-9_-]/g);
-// Note: hyphen literal is at the end of the group to avoid range creation

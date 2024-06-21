@@ -17,6 +17,18 @@ describe("validate: alphabeticWithSpaces", () => {
   test("returns false when given a string containing numbers", () => {
     expect(isValidAlphabeticWithSpaces("abc def 123")).toBe(false);
   });
+  test("returns false when given a string containing invalid whitespace characters", () => {
+    expect(isValidAlphabeticWithSpaces("abc \f def")).toBe(false);
+    expect(isValidAlphabeticWithSpaces("abc \n def")).toBe(false);
+    expect(isValidAlphabeticWithSpaces("abc \r def")).toBe(false);
+    expect(isValidAlphabeticWithSpaces("abc \t def")).toBe(false);
+    expect(isValidAlphabeticWithSpaces("abc \v def")).toBe(false);
+    expect(
+      isValidAlphabeticWithSpaces(`
+        abc
+        def`)
+    ).toBe(false);
+  });
   test("returns false when given a string containing a null unicode character", () => {
     expect(isValidAlphabeticWithSpaces("abc def \u0000")).toBe(false);
   });
