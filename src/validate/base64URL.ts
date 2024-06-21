@@ -13,6 +13,8 @@ import { getRegexValidatorFn } from "./_helpers.js";
  * - Must be at least 2 characters long
  *
  * @see https://base64.guru/standards/base64url
+ *
+ * **Pattern Notes:**
+ * - The hyphen literal is at the end of the group to avoid unintentional range creation.
  */
 export const isValidBase64URL = getRegexValidatorFn(/^[a-zA-Z0-9_-]{2,}$/);
-// Note: hyphen literal is at the end of the group to avoid range creation
