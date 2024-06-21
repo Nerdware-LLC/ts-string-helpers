@@ -15,4 +15,5 @@ export * from "./name.js";
 export * from "./numeric.js";
 export * from "./password.js";
 export * from "./phone.js";
+export * from "./text.js";
 export * from "./url.js";
