@@ -4,20 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ---
 
-# [1.5.0-next.2](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.5.0-next.1...v1.5.0-next.2) (2024-06-21)
-
-
-### Bug Fixes
-
-* replace '\s' with '\x20' in fns meant to only allow single-space chars ([fb86390](https://github.com/Nerdware-LLC/ts-string-helpers/commit/fb863909d7ee3687e4a1bdee8c9fca59dfd30641))
-
-
-### Features
-
-* add 'name' and 'text' sanitizers+validators ([17e6084](https://github.com/Nerdware-LLC/ts-string-helpers/commit/17e608434aad73c810069a76685f085ccd7a85d3))
-
-# [1.5.0-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.8...v1.5.0-next.1) (2024-06-18)
-
+# [1.5.0](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.8...v1.5.0) (2024-06-19)
 
 ### Features
 
@@ -31,7 +18,6 @@ All notable changes to this project will be documented in this file.
 
 ## [1.4.6](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.5...v1.4.6) (2024-06-05)
 
-
 ### Bug Fixes
 
 * add 'git+' prefix to 'repository.url' ([844042b](https://github.com/Nerdware-LLC/ts-string-helpers/commit/844042bc9e4ac75a13fe196a115106bdf527cf38))
@@ -43,7 +29,6 @@ All notable changes to this project will be documented in this file.
 ## [1.4.3](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.2...v1.4.3) (2024-06-05)
 
 ## [1.4.2](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.4.1...v1.4.2) (2024-05-25)
-
 
 ### Bug Fixes
 
