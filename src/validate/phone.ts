@@ -1,7 +1,7 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` is a valid string of US phone number _DIGITS_
  * (no spaces or special characters).
  */
-export const isValidPhone = getRegexValidatorFn(/^[1-9]\d{9}$/);
+export const isValidPhone = getValidatorFn(/^[1-9]\d{9}$/);

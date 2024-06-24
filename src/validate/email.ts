@@ -1,9 +1,9 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` is a valid email address.
  */
-export const isValidEmail = getRegexValidatorFn([
+export const isValidEmail = getValidatorFn([
   /**
    * EMAIL REGEX 1: The first email regex pattern below is used to test if a value conforms to
    * the official RFC 5322 email address format. It does NOT, however, check the entire length

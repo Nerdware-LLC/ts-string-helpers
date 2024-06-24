@@ -1,4 +1,4 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` is a valid name (e.g., `"José São Hüman-persón"`).
@@ -26,4 +26,4 @@ import { getRegexValidatorFn } from "./_helpers.js";
  * - `\x20` is the ASCII hex code for a single horizontal space.
  * - The hyphen literal is at the end of the group to avoid unintentional range creation.
  */
-export const isValidName = getRegexValidatorFn(/^\p{Script=Latin}[\p{Script=Latin}\x20'.,-]*$/u);
+export const isValidName = getValidatorFn(/^\p{Script=Latin}[\p{Script=Latin}\x20'.,-]*$/u);

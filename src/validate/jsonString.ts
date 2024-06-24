@@ -1,9 +1,9 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` is `value` only contains valid JSON characters.
  */
-export const isValidJsonString = getRegexValidatorFn(
+export const isValidJsonString = getValidatorFn(
   /**
    * The pattern below works by testing for characters within the ASCII printable
    * range. The permitted-character range begins with ` ` (space char), which is
