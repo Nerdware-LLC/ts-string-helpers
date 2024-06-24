@@ -1,13 +1,28 @@
 /**
+ * A function which takes a string input, sanitizes it by removing undesired
+ * characters using the function's associated regex pattern, and returns the
+ * resultant sanitized string.
+ *
+ * Each sanitizer function has a `_regex` property where its associated
+ * `RegExp` object is stored (e.g., `mySanitizerFn._regex`).
+ */
+export interface SanitizerFn<T extends RegExp> {
+  (str: string): string;
+  readonly _regex: T;
+}
+
+/**
  * Returns a sanitizer function that removes undesired characters from a string
  * input using the provided `regex`.
  *
- * @internal
  * @param regex - The regular expression used to match the undesired characters.
  * @returns A function that takes a string input and returns the sanitized string.
  */
-export const getSanitizerFn = (regex: RegExp) => {
-  return (str: string): string => str.replace(regex, "");
+export const getSanitizerFn = <T extends RegExp>(regex: T): SanitizerFn<T> => {
+  return Object.assign(
+    (str: string): string => str.replace(regex, ""), // prettier-ignore
+    { _regex: regex }
+  );
 };
 
 /** Regex pattern for testing `sanitize` functions which matches all zero-width characters and ASCII/unicode control characters. @internal */
