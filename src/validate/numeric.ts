@@ -1,6 +1,6 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` only contains numbers.
  */
-export const isValidNumeric = getRegexValidatorFn(/^[0-9]+$/);
+export const isValidNumeric = getValidatorFn(/^[0-9]+$/);

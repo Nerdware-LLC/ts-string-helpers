@@ -1,4 +1,4 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` is a valid base64URL-encoded string.
@@ -17,4 +17,4 @@ import { getRegexValidatorFn } from "./_helpers.js";
  * **Pattern Notes:**
  * - The hyphen literal is at the end of the group to avoid unintentional range creation.
  */
-export const isValidBase64URL = getRegexValidatorFn(/^[a-zA-Z0-9_-]{2,}$/);
+export const isValidBase64URL = getValidatorFn(/^[a-zA-Z0-9_-]{2,}$/);

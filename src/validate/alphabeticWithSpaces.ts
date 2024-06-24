@@ -1,4 +1,4 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` only contains alphabetic characters and/or spaces.
@@ -8,4 +8,4 @@ import { getRegexValidatorFn } from "./_helpers.js";
  * **Pattern Notes:**
  * - `\x20` is the ASCII hex code for a single horizontal space.
  */
-export const isValidAlphabeticWithSpaces = getRegexValidatorFn(/^[a-zA-Z\x20]+$/);
+export const isValidAlphabeticWithSpaces = getValidatorFn(/^[a-zA-Z\x20]+$/);

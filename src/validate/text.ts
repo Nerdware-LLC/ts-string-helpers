@@ -1,4 +1,4 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` only contains characters which meet the following criteria:
@@ -38,4 +38,4 @@ import { getRegexValidatorFn } from "./_helpers.js";
  * - `\p{Script=Latin}` is used as a more i18n-friendly alternative to `[a-zA-Z]`.
  * - The hyphen literal is at the end of the group to avoid unintentional range creation.
  */
-export const isValidText = getRegexValidatorFn(/^[\p{Script=Latin}\d\s%$#@'&.,:;"!?+=()_—-]+$/u);
+export const isValidText = getValidatorFn(/^[\p{Script=Latin}\d\s%$#@'&.,:;"!?+=()_—-]+$/u);

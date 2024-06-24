@@ -1,4 +1,4 @@
-export { getRegexValidatorFn } from "./_helpers.js";
+export { getValidatorFn } from "./_helpers.js";
 export * from "./alphabetic.js";
 export * from "./alphabeticWithSpaces.js";
 export * from "./alphanumeric.js";

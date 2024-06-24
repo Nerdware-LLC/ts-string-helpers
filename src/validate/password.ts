@@ -1,4 +1,4 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` is a valid password, which must meet the following conditions:
@@ -8,6 +8,6 @@ import { getRegexValidatorFn } from "./_helpers.js";
  * - Contains at least one of `!`, `@`, `#`, `$`, `%`, `^`, `&`, and/or `*`.
  * - Is at least 6 characters long, and no more than 250 characters long.
  */
-export const isValidPassword = getRegexValidatorFn(
+export const isValidPassword = getValidatorFn(
   /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{6,250}$/
 );

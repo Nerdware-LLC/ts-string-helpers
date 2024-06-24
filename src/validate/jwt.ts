@@ -1,4 +1,4 @@
-import { getRegexValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "./_helpers.js";
 
 /**
  * Returns `true` if `value` is a valid JWT.
@@ -10,4 +10,4 @@ import { getRegexValidatorFn } from "./_helpers.js";
  * - The minimum length is 2 characters per section.
  * - Hyphen literals are at the end of their groups to avoid unintentional range creation.
  */
-export const isValidJWT = getRegexValidatorFn(/^([a-zA-Z0-9_-]{2,}\.){2}[a-zA-Z0-9_-]{2,}$/);
+export const isValidJWT = getValidatorFn(/^([a-zA-Z0-9_-]{2,}\.){2}[a-zA-Z0-9_-]{2,}$/);

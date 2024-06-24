@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+# [1.7.0-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.6.1...v1.7.0-next.1) (2024-06-24)
+
+
+### Features
+
+* add _regex property to exported fns ([c252e8c](https://github.com/Nerdware-LLC/ts-string-helpers/commit/c252e8cf3a2ed13856ff3886acb5c99e3f6b0787))
+
 ## [1.6.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.6.0...v1.6.1) (2024-06-21)
 
 
