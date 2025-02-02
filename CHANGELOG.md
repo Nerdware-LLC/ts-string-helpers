@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.7.2-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.7.1...v1.7.2-next.1) (2025-02-02)
+
 ## [1.7.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.7.0...v1.7.1) (2024-08-03)
 
 ## [1.7.1-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.7.0...v1.7.1-next.1) (2024-08-03)
