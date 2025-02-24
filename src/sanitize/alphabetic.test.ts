@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizeAlphabetic } from "./alphabetic.js";
 
-describe("sanitize: alphabetic", () => {
+describe("sanitizeAlphabetic", () => {
   test("removes all non-alphabetic characters", () => {
     const input = `ab c${ZERO_WIDTH_SPACE}1 23${NULL_CONTROL_CHAR}~!@#$%^&*()_+-={}|:"<>?[]\\;',./`;
     const result = sanitizeAlphabetic(input);

@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizeJWT } from "./jwt.js";
 
-describe("sanitize: JWT", () => {
+describe("sanitizeJWT", () => {
   test("removes all non-JWT characters", () => {
     const input = `ab c${ZERO_WIDTH_SPACE}1 23${NULL_CONTROL_CHAR}~!@#$%^&*()_+-={}|:"<>?[]\\;',./`;
     const result = sanitizeJWT(input);

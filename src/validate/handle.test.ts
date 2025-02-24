@@ -1,6 +1,6 @@
 import { isValidHandle } from "./handle.js";
 
-describe("validate: handle", () => {
+describe("isValidHandle", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a valid social media handle string", () => {

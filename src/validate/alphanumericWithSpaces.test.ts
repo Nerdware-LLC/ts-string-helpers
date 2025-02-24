@@ -1,6 +1,6 @@
 import { isValidAlphanumericWithSpaces } from "./alphanumericWithSpaces.js";
 
-describe("validate: alphanumericWithSpaces", () => {
+describe("isValidAlphanumericWithSpaces", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a string containing only alphanumeric characters and/or spaces", () => {

@@ -1,6 +1,6 @@
 import { isValidCurrency } from "./currency.js";
 
-describe("validate: currency", () => {
+describe("isValidCurrency", () => {
   // prettier-ignore
   const baseValidAmountStrings = ["0", "1", "12", "123", "1,234", "12,345", "123,456", "1,234,567", "12,345,678", "123,456,789"];
 

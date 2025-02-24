@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizeAlphabeticWithSpaces } from "./alphabeticWithSpaces.js";
 
-describe("sanitize: alphabeticwithspaces", () => {
+describe("sanitizeAlphabeticWithSpaces", () => {
   test("removes all non-alphabetic/space characters", () => {
     const input = `ab c${ZERO_WIDTH_SPACE}1 23${NULL_CONTROL_CHAR}~!@#$%^&*()_+-={}|:"<>?[]\\;',./`;
     const result = sanitizeAlphabeticWithSpaces(input);

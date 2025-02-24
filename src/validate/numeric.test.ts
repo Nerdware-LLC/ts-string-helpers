@@ -1,6 +1,6 @@
 import { isValidNumeric } from "./numeric.js";
 
-describe("validate: numeric", () => {
+describe("isValidNumeric", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a string containing only numeric characters", () => {

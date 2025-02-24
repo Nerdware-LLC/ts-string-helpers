@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizeHandle } from "./handle.js";
 
-describe("sanitize: handle", () => {
+describe("sanitizeHandle", () => {
   test("removes all non-handle characters", () => {
     const input = `@${ZERO_WIDTH_SPACE}foo_ user${NULL_CONTROL_CHAR}~!#$%^&*()+-={}|:"<>?[]\\;',./`;
     const result = sanitizeHandle(input);

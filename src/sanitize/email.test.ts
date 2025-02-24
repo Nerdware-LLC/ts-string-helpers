@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizeEmail } from "./email.js";
 
-describe("sanitize: email", () => {
+describe("sanitizeEmail", () => {
   test("removes all non-email characters", () => {
     const input = `foo_1+bar${NULL_CONTROL_CHAR}@gma il.com${ZERO_WIDTH_SPACE}~!#$%^&*()={}|:"<>?[]\\;',/`;
     const result = sanitizeEmail(input);

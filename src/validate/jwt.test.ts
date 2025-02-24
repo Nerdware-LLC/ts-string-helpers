@@ -1,6 +1,6 @@
 import { isValidJWT } from "./jwt.js";
 
-describe("validate: JWT", () => {
+describe("isValidJWT", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a string is a valid JWT", () => {

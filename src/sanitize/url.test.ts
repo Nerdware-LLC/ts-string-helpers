@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizeURL } from "./url.js";
 
-describe("sanitize: url", () => {
+describe("sanitizeURL", () => {
   test("removes all non-URL characters", () => {
     const input = `<>https://www.exa mple.com${ZERO_WIDTH_SPACE}/path?query=value${NULL_CONTROL_CHAR}#fragment<>%^*{}|"`;
     const result = sanitizeURL(input);

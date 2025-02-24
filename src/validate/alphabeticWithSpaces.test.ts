@@ -1,6 +1,6 @@
 import { isValidAlphabeticWithSpaces } from "./alphabeticWithSpaces.js";
 
-describe("validate: alphabeticWithSpaces", () => {
+describe("isValidAlphabeticWithSpaces", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a string containing only letters and/or spaces", () => {

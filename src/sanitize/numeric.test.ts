@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizeNumeric } from "./numeric.js";
 
-describe("sanitize: numeric", () => {
+describe("sanitizeNumeric", () => {
   test("removes all non-numeric characters", () => {
     const input = `ab c${ZERO_WIDTH_SPACE}1 23${NULL_CONTROL_CHAR}~!@#$%^&*()_+-={}|:"<>?[]\\;',./`;
     const result = sanitizeNumeric(input);

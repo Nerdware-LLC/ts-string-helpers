@@ -1,6 +1,6 @@
 import { isValidName } from "./name.js";
 
-describe("validate: name", () => {
+describe("isValidName", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when called with a value which contains ASCII letters", () => {

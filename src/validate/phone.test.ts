@@ -1,6 +1,6 @@
 import { isValidPhone } from "./phone.js";
 
-describe("validate: phone", () => {
+describe("isValidPhone", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a valid US phone-digits string", () => {

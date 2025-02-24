@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizePassword } from "./password.js";
 
-describe("sanitize: password", () => {
+describe("sanitizePassword", () => {
   test("removes all disallowed password characters", () => {
     const input = `ab c${ZERO_WIDTH_SPACE}1 23${NULL_CONTROL_CHAR}~!@#$%^&*()_+-={}|:"<>?[]\\;',./`;
     const result = sanitizePassword(input);

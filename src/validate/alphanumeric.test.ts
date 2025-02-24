@@ -1,6 +1,6 @@
 import { isValidAlphanumeric } from "./alphanumeric.js";
 
-describe("validate: alphanumeric", () => {
+describe("isValidAlphanumeric", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a string containing only alphanumeric characters", () => {

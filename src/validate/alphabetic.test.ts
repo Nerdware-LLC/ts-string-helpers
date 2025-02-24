@@ -1,6 +1,6 @@
 import { isValidAlphabetic } from "./alphabetic.js";
 
-describe("validate: alphabetic", () => {
+describe("isValidAlphabetic", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a string containing only letters", () => {

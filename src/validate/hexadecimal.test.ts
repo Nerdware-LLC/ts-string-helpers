@@ -1,6 +1,6 @@
 import { isValidHex } from "./hexadecimal.js";
 
-describe("validate: hexadecimal", () => {
+describe("isValidHex", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a string containing only hexadecimal chars", () => {

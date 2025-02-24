@@ -1,6 +1,6 @@
 import { isValidBase64 } from "./base64.js";
 
-describe("validate: base64", () => {
+describe("isValidBase64", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a valid base64-encoded string", () => {

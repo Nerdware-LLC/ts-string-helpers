@@ -5,7 +5,7 @@ import {
 } from "../utils/characters.test.js";
 import { sanitizeJsonString } from "./jsonString.js";
 
-describe("sanitize: jsonString", () => {
+describe("sanitizeJsonString", () => {
   test("removes all non-json characters", () => {
     const input = `{"foo":"bar","baz":"${ZERO_WIDTH_SPACE}1 23${NULL_CONTROL_CHAR}~!@#$%^&*()_+-={}|:"<>?[]\\;',./"}`;
     const result = sanitizeJsonString(input);
