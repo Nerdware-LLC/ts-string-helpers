@@ -18,6 +18,9 @@ describe("isValidName", () => {
 
   // NEGATIVE TEST CASES:
 
+  test("returns false when called with a value that starts with an apostrophe", () => {
+    expect(isValidName("'Jane Doe")).toBe(false);
+  });
   test("returns false when called with a value which contains invalid special characters", () => {
     expect(isValidName("Jane Doe!@#$%^&*()_+123")).toBe(false);
   });
