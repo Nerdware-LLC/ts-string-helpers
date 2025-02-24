@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+# [1.8.0](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.7.2...v1.8.0) (2025-02-24)
+
+
+### Bug Fixes
+
+* add `isString` check to ensure type-safety ([e35b734](https://github.com/Nerdware-LLC/ts-string-helpers/commit/e35b7347fce012788883c0fd72e9d75c5858e760))
+* add override for `isExpectedType` param to allow number inputs ([c305184](https://github.com/Nerdware-LLC/ts-string-helpers/commit/c3051846e75740b5dca25e7bf258246a521effe0))
+* replace `isString` w parameter `isExpectedType` ([443ebe5](https://github.com/Nerdware-LLC/ts-string-helpers/commit/443ebe536dc5dcf54637947d6c0259b51813d55b))
+* rm old '_WithSpaces' exports ([070f153](https://github.com/Nerdware-LLC/ts-string-helpers/commit/070f1535728d959d2acdffdefa7494bd105b4516))
+* update phone tests to reflect new behavior ([aaebb90](https://github.com/Nerdware-LLC/ts-string-helpers/commit/aaebb90d9627a4b5e7cded77633c05ac11c39057))
+* update sani regex to only allow phone-format chars ([1da1969](https://github.com/Nerdware-LLC/ts-string-helpers/commit/1da19694e87605846ad1b2414b42198132061eaa))
+
+
+### Features
+
+* add `escapeString` util ([5122feb](https://github.com/Nerdware-LLC/ts-string-helpers/commit/5122feb0c65629d80cf57d05589d84bfd477d3c3))
+* add `getAllowListSanitizationRegex` util ([af9d53a](https://github.com/Nerdware-LLC/ts-string-helpers/commit/af9d53ad30461839f671c29910e50e0f915b6292))
+* add `isValidISO8601Timestamp` ([1ec495f](https://github.com/Nerdware-LLC/ts-string-helpers/commit/1ec495f43b117c5ee368bb9ec0cad2af8c1c9225))
+* add `isValidStreetAddress` ([20578a9](https://github.com/Nerdware-LLC/ts-string-helpers/commit/20578a92e17a50c4951b6a34f231c48068c01c2c))
+* add `unescapeString` util ([9a366f1](https://github.com/Nerdware-LLC/ts-string-helpers/commit/9a366f15dc7a5d0bdc27eade4c58a519cf0abb80))
+* rm the '_WithSpaces' validators+sanitizers ([64db4ac](https://github.com/Nerdware-LLC/ts-string-helpers/commit/64db4ac62f496cd73910e0a362c226ed2d972c0c))
+
 # [1.8.0-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.7.2...v1.8.0-next.1) (2025-02-24)
 
 
