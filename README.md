@@ -147,6 +147,7 @@ app.post("/register", (req, res, next) => {
 | [`isValidText`](src/validate/text.ts)                         | Returns `true` if `value` does not contain potentially harmful characters ([🌎i18n-friendly](#-unicode-support)) |
 | [`isValidURL`](src/validate/url.ts)                           | Returns `true` if `value` is a valid absolute or relative URL (protocol agnostic)                                |
 | [`isValidHttpURL`](src/validate/url.ts)                       | Returns `true` if `value` is a valid absolute HTTP/S URL                                                         |
+| [`isValidUUID`](src/validate/uuid.ts)                         | Returns `true` if `value` is a valid UUID _**of any version**_                                                   |
 
 ## 🌎 Unicode Support
 
