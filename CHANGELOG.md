@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+# [1.9.0-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.8.1...v1.9.0-next.1) (2025-02-24)
+
+
+### Features
+
+* add `isValidUUID` ([5d77323](https://github.com/Nerdware-LLC/ts-string-helpers/commit/5d773230f72c035da2423856c71bacb8177ac98d))
+
 ## [1.8.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.8.0...v1.8.1) (2025-02-24)
 
 
