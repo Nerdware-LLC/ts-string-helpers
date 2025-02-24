@@ -9,6 +9,7 @@ export * from "./email.js";
 export * from "./handle.js";
 export * from "./hexadecimal.js";
 export * from "./id.js";
+export * from "./iso8601Timestamp.js";
 export * from "./jsonString.js";
 export * from "./jwt.js";
 export * from "./name.js";

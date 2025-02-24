@@ -142,6 +142,7 @@ app.post("/register", (req, res, next) => {
 | [`isValidHandle`](src/validate/handle.ts)                                 | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)                                   |
 | [`isValidHex`](src/validate/hexadecimal.ts)                               | Returns `true` if `value` only contains hexadecimal characters                                                   |
 | [`isValidID`](src/validate/id.ts)                                         | Returns `true` if `value` only contains alphanumeric characters, `_`, `-`, or `#`                                |
+| [`isValidISO8601Timestamp`](src/validate/iso8601Timestamp.ts)             | Returns `true` if `value` is a valid ISO-8601 timestamp                                                          |
 | [`isValidJsonString`](src/validate/jsonString.ts)                         | Returns `true` is `value` only contains valid JSON characters                                                    |
 | [`isValidJWT`](src/validate/token.ts)                                     | Returns `true` if `value` only contains valid JSON Web Token characters                                          |
 | [`isValidName`](src/validate/name.ts)                                     | Returns `true` if `value` only contains name-related characters ([🌎i18n-friendly](#-unicode-support))           |
