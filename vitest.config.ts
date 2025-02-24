@@ -11,6 +11,7 @@ export default defineConfig({
     restoreMocks: true,
     globals: true,
     silent: true,
+    passWithNoTests: true, // For test-related utils in *.test.ts files
     environment: "node",
     include: ["**/?(*.)test.ts"],
     reporters: ["default", ...(process.env.GITHUB_ACTIONS ? [new GithubActionsReporter()] : [])],
