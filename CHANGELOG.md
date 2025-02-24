@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 ---
 
+## [1.8.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.8.0...v1.8.1) (2025-02-24)
+
+
+### Bug Fixes
+
+* add export of `streetAddress` ([9acf435](https://github.com/Nerdware-LLC/ts-string-helpers/commit/9acf435fab7c618ad46780848dc5e694e46e88f2))
+* add export of `streetAddress` ([#101](https://github.com/Nerdware-LLC/ts-string-helpers/issues/101)) ([2a77e21](https://github.com/Nerdware-LLC/ts-string-helpers/commit/2a77e2174160659594f7348d2857bd1b8427a294))
+
 ## [1.8.1-next.1](https://github.com/Nerdware-LLC/ts-string-helpers/compare/v1.8.0...v1.8.1-next.1) (2025-02-24)
 
 
