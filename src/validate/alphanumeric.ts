@@ -1,3 +1,4 @@
+import { isString, isSafeInteger } from "@nerdware/ts-type-safety-utils";
 import { getValidatorFn } from "../utils/getValidatorFn.js";
 
 export const ALPHANUMERIC_VALIDATION_REGEX = /^[a-zA-Z0-9]+$/;
@@ -7,4 +8,7 @@ export const ALPHANUMERIC_VALIDATION_REGEX = /^[a-zA-Z0-9]+$/;
  *
  * > This function only permits [ASCII characters](https://www.asciitable.com/).
  */
-export const isValidAlphanumeric = getValidatorFn(ALPHANUMERIC_VALIDATION_REGEX);
+export const isValidAlphanumeric = getValidatorFn(
+  ALPHANUMERIC_VALIDATION_REGEX,
+  (value?: unknown) => isString(value) || isSafeInteger(value)
+);
