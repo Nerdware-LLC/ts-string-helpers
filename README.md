@@ -44,8 +44,6 @@ This package provides a lightweight set of TypeScript utils to `sanitize` and `v
 
 The `sanitize` functions use reverse-regex patterns to strip unwanted characters from strings — _even pesky zero-width control characters_ — leaving only the characters you want. This is useful for sanitizing user input and other untrusted data.
 
-For each `sanitize` function, there's a corresponding `validate` function to ensure strings match a specific format.
-
 ### 📦 Installation
 
 Install the package using your package manager of choice:
@@ -104,54 +102,51 @@ app.post("/register", (req, res, next) => {
 
 ### Sanitizers
 
-| Function                                                                   | Description                                                                                             |
-| :------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------ |
-| [`sanitizeAlphabetic`](src/sanitize/alphabetic.ts)                         | Removes non-alphabetic characters                                                                       |
-| [`sanitizeAlphabeticWithSpaces`](src/sanitize/alphabeticWithSpaces.ts)     | Removes non-alphabetic/space characters                                                                 |
-| [`sanitizeAlphanumeric`](src/sanitize/alphanumeric.ts)                     | Removes non-alphanumeric characters                                                                     |
-| [`sanitizeAlphanumericWithSpaces`](src/sanitize/alphanumericWithSpaces.ts) | Removes non-alphanumeric/space characters                                                               |
-| [`sanitizeBase64`](src/sanitize/base64.ts)                                 | Removes invalid base64 characters                                                                       |
-| [`sanitizeBase64URL`](src/sanitize/base64URL.ts)                           | Removes invalid base64URL characters                                                                    |
-| [`sanitizeEmail`](src/sanitize/email.ts)                                   | Removes invalid email characters (see [RFC 5322][rfc-5322])                                             |
-| [`sanitizeHandle`](src/sanitize/handle.ts)                                 | Removes invalid social-handle characters                                                                |
-| [`sanitizeHex`](src/sanitize/hexadecimal.ts)                               | Removes non-hexadecimal characters                                                                      |
-| [`sanitizeID`](src/sanitize/id.ts)                                         | Removes non-alphanumeric characters which are not `_`, `-`, or `#`                                      |
-| [`sanitizeJsonString`](src/sanitize/jsonString.ts)                         | Removes characters which are not valid in stringified JSON                                              |
-| [`sanitizeJWT`](src/sanitize/jwt.ts)                                       | Removes characters which are not valid in a JSON Web Token                                              |
-| [`sanitizeName`](src/sanitize/name.ts)                                     | Removes characters which are generally not valid in a name ([🌎i18n-friendly](#-unicode-support))       |
-| [`sanitizeNumeric`](src/sanitize/numeric.ts)                               | Removes non-numeric characters                                                                          |
-| [`sanitizePassword`](src/sanitize/password.ts)                             | Removes non-alphanumeric characters which are not `!`, `@`, `#`, `$`, `%`, `^`, `&`, or `*`             |
-| [`sanitizePhone`](src/sanitize/phone.ts)                                   | Removes characters which are not valid in a phone number                                                |
-| [`sanitizeText`](src/sanitize/text.ts)                                     | Removes characters which are generally not used in text/comments ([🌎i18n-friendly](#-unicode-support)) |
-| [`sanitizeURL`](src/sanitize/url.ts)                                       | Removes invalid URL characters                                                                          |
+| Function                                               | Description                                                                                             |
+| :----------------------------------------------------- | :------------------------------------------------------------------------------------------------------ |
+| [`sanitizeAlphabetic`](src/sanitize/alphabetic.ts)     | Removes non-alphabetic characters                                                                       |
+| [`sanitizeAlphanumeric`](src/sanitize/alphanumeric.ts) | Removes non-alphanumeric characters                                                                     |
+| [`sanitizeBase64`](src/sanitize/base64.ts)             | Removes invalid base64 characters                                                                       |
+| [`sanitizeBase64URL`](src/sanitize/base64URL.ts)       | Removes invalid base64URL characters                                                                    |
+| [`sanitizeEmail`](src/sanitize/email.ts)               | Removes invalid email characters (see [RFC 5322][rfc-5322])                                             |
+| [`sanitizeHandle`](src/sanitize/handle.ts)             | Removes invalid social-handle characters                                                                |
+| [`sanitizeHex`](src/sanitize/hexadecimal.ts)           | Removes non-hexadecimal characters                                                                      |
+| [`sanitizeID`](src/sanitize/id.ts)                     | Removes non-alphanumeric characters which are not `_`, `-`, or `#`                                      |
+| [`sanitizeJsonString`](src/sanitize/jsonString.ts)     | Removes characters which are not valid in stringified JSON                                              |
+| [`sanitizeJWT`](src/sanitize/jwt.ts)                   | Removes characters which are not valid in a JSON Web Token                                              |
+| [`sanitizeName`](src/sanitize/name.ts)                 | Removes characters which are generally not valid in a name ([🌎i18n-friendly](#-unicode-support))       |
+| [`sanitizeNumeric`](src/sanitize/numeric.ts)           | Removes non-numeric characters                                                                          |
+| [`sanitizePassword`](src/sanitize/password.ts)         | Removes non-alphanumeric characters which are not `!`, `@`, `#`, `$`, `%`, `^`, `&`, or `*`             |
+| [`sanitizePhone`](src/sanitize/phone.ts)               | Removes characters which are not valid in a phone number                                                |
+| [`sanitizeText`](src/sanitize/text.ts)                 | Removes characters which are generally not used in text/comments ([🌎i18n-friendly](#-unicode-support)) |
+| [`sanitizeURL`](src/sanitize/url.ts)                   | Removes invalid URL characters                                                                          |
 
 [rfc-5322]: https://datatracker.ietf.org/doc/html/rfc5322
 
 ### Validators
 
-| Function                                                                  | Description                                                                                                      |
-| :------------------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------- |
-| [`isValidAlphabetic`](src/validate/alphabetic.ts)                         | Returns `true` if `value` only contains alphabetic characters                                                    |
-| [`isValidAlphabeticWithSpaces`](src/validate/alphabeticWithSpaces.ts)     | Returns `true` if `value` only contains alphabetic characters and/or spaces                                      |
-| [`isValidAlphanumeric`](src/validate/alphanumeric.ts)                     | Returns `true` if `value` only contains alphanumeric characters                                                  |
-| [`isValidAlphanumericWithSpaces`](src/validate/alphanumericWithSpaces.ts) | Returns `true` if `value` only contains alphanumeric characters and/or spaces                                    |
-| [`isValidBase64`](src/validate/base64.ts)                                 | Returns `true` if `value` is a valid base64 string                                                               |
-| [`isValidBase64URL`](src/validate/base64URL.ts)                           | Returns `true` if `value` is a valid base64URL string                                                            |
-| [`isValidCurrency`](src/validate/currency.ts)                             | Returns `true` if `value` is a valid USD currency-formatted string                                               |
-| [`isValidEmail`](src/validate/email.ts)                                   | Returns `true` if `value` is a valid email address (see [RFC 5322][rfc-5322])                                    |
-| [`isValidHandle`](src/validate/handle.ts)                                 | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)                                   |
-| [`isValidHex`](src/validate/hexadecimal.ts)                               | Returns `true` if `value` only contains hexadecimal characters                                                   |
-| [`isValidID`](src/validate/id.ts)                                         | Returns `true` if `value` only contains alphanumeric characters, `_`, `-`, or `#`                                |
-| [`isValidISO8601Timestamp`](src/validate/iso8601Timestamp.ts)             | Returns `true` if `value` is a valid ISO-8601 timestamp                                                          |
-| [`isValidJsonString`](src/validate/jsonString.ts)                         | Returns `true` is `value` only contains valid JSON characters                                                    |
-| [`isValidJWT`](src/validate/token.ts)                                     | Returns `true` if `value` only contains valid JSON Web Token characters                                          |
-| [`isValidName`](src/validate/name.ts)                                     | Returns `true` if `value` only contains name-related characters ([🌎i18n-friendly](#-unicode-support))           |
-| [`isValidNumeric`](src/validate/numeric.ts)                               | Returns `true` if `value` only contains numeric characters                                                       |
-| [`isValidPassword`](src/validate/password.ts)                             | Returns `true` if `value` is a valid password (see jsdoc for details)                                            |
-| [`isValidPhone`](src/validate/phone.ts)                                   | Returns `true` if `value` is a valid US phone number                                                             |
-| [`isValidText`](src/validate/text.ts)                                     | Returns `true` if `value` does not contain potentially harmful characters ([🌎i18n-friendly](#-unicode-support)) |
-| [`isValidURL`](src/validate/url.ts)                                       | Returns `true` if `value` is a valid absolute or relative URL (protocol agnostic)                                |
-| [`isValidHttpURL`](src/validate/url.ts)                                   | Returns `true` if `value` is a valid absolute HTTP/S URL                                                         |
+| Function                                                      | Description                                                                                                      |
+| :------------------------------------------------------------ | :--------------------------------------------------------------------------------------------------------------- |
+| [`isValidAlphabetic`](src/validate/alphabetic.ts)             | Returns `true` if `value` only contains alphabetic characters                                                    |
+| [`isValidAlphanumeric`](src/validate/alphanumeric.ts)         | Returns `true` if `value` only contains alphanumeric characters                                                  |
+| [`isValidBase64`](src/validate/base64.ts)                     | Returns `true` if `value` is a valid base64 string                                                               |
+| [`isValidBase64URL`](src/validate/base64URL.ts)               | Returns `true` if `value` is a valid base64URL string                                                            |
+| [`isValidCurrency`](src/validate/currency.ts)                 | Returns `true` if `value` is a valid USD currency-formatted string                                               |
+| [`isValidEmail`](src/validate/email.ts)                       | Returns `true` if `value` is a valid email address (see [RFC 5322][rfc-5322])                                    |
+| [`isValidHandle`](src/validate/handle.ts)                     | Returns `true` if `value` is a valid social account handle (e.g., `@foo_user`)                                   |
+| [`isValidHex`](src/validate/hexadecimal.ts)                   | Returns `true` if `value` only contains hexadecimal characters                                                   |
+| [`isValidID`](src/validate/id.ts)                             | Returns `true` if `value` only contains alphanumeric characters, `_`, `-`, or `#`                                |
+| [`isValidISO8601Timestamp`](src/validate/iso8601Timestamp.ts) | Returns `true` if `value` is a valid ISO-8601 timestamp                                                          |
+| [`isValidJsonString`](src/validate/jsonString.ts)             | Returns `true` is `value` only contains valid JSON characters                                                    |
+| [`isValidJWT`](src/validate/token.ts)                         | Returns `true` if `value` only contains valid JSON Web Token characters                                          |
+| [`isValidName`](src/validate/name.ts)                         | Returns `true` if `value` only contains name-related characters ([🌎i18n-friendly](#-unicode-support))           |
+| [`isValidNumeric`](src/validate/numeric.ts)                   | Returns `true` if `value` only contains numeric characters                                                       |
+| [`isValidPassword`](src/validate/password.ts)                 | Returns `true` if `value` is a valid password (see jsdoc for details)                                            |
+| [`isValidPhone`](src/validate/phone.ts)                       | Returns `true` if `value` is a valid US phone number                                                             |
+| [`isValidStreetAddress`](src/validate/streetAddress.ts)       | Returns `true` if `value` is a valid street address (line 1 or line 2) ([🌎i18n-friendly](#-unicode-support))    |
+| [`isValidText`](src/validate/text.ts)                         | Returns `true` if `value` does not contain potentially harmful characters ([🌎i18n-friendly](#-unicode-support)) |
+| [`isValidURL`](src/validate/url.ts)                           | Returns `true` if `value` is a valid absolute or relative URL (protocol agnostic)                                |
+| [`isValidHttpURL`](src/validate/url.ts)                       | Returns `true` if `value` is a valid absolute HTTP/S URL                                                         |
 
 ## 🌎 Unicode Support
 
