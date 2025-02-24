@@ -121,7 +121,7 @@ app.post("/register", (req, res, next) => {
 | [`sanitizeName`](src/sanitize/name.ts)                                     | Removes characters which are generally not valid in a name ([🌎i18n-friendly](#-unicode-support))       |
 | [`sanitizeNumeric`](src/sanitize/numeric.ts)                               | Removes non-numeric characters                                                                          |
 | [`sanitizePassword`](src/sanitize/password.ts)                             | Removes non-alphanumeric characters which are not `!`, `@`, `#`, `$`, `%`, `^`, `&`, or `*`             |
-| [`sanitizePhone`](src/sanitize/phone.ts)                                   | Alias of [`sanitizeNumeric`](src/sanitize/numeric.ts)                                                   |
+| [`sanitizePhone`](src/sanitize/phone.ts)                                   | Removes characters which are not valid in a phone number                                                |
 | [`sanitizeText`](src/sanitize/text.ts)                                     | Removes characters which are generally not used in text/comments ([🌎i18n-friendly](#-unicode-support)) |
 | [`sanitizeURL`](src/sanitize/url.ts)                                       | Removes invalid URL characters                                                                          |
 
@@ -148,7 +148,7 @@ app.post("/register", (req, res, next) => {
 | [`isValidName`](src/validate/name.ts)                                     | Returns `true` if `value` only contains name-related characters ([🌎i18n-friendly](#-unicode-support))           |
 | [`isValidNumeric`](src/validate/numeric.ts)                               | Returns `true` if `value` only contains numeric characters                                                       |
 | [`isValidPassword`](src/validate/password.ts)                             | Returns `true` if `value` is a valid password (see jsdoc for details)                                            |
-| [`isValidPhone`](src/validate/phone.ts)                                   | Returns `true` if `value` is a valid string of US phone number _DIGITS_                                          |
+| [`isValidPhone`](src/validate/phone.ts)                                   | Returns `true` if `value` is a valid US phone number                                                             |
 | [`isValidText`](src/validate/text.ts)                                     | Returns `true` if `value` does not contain potentially harmful characters ([🌎i18n-friendly](#-unicode-support)) |
 | [`isValidURL`](src/validate/url.ts)                                       | Returns `true` if `value` is a valid absolute or relative URL (protocol agnostic)                                |
 | [`isValidHttpURL`](src/validate/url.ts)                                   | Returns `true` if `value` is a valid absolute HTTP/S URL                                                         |
