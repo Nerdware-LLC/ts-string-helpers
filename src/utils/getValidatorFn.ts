@@ -9,12 +9,17 @@ export type ValidatorFn = (value?: unknown) => value is string;
  * Returns a {@link ValidatorFn} which takes an unknown input, and returns
  * `true` if the input is a string that matches the provided regex pattern(s).
  */
-export const getValidatorFn = (regexArg: RegExp | Array<RegExp>): ValidatorFn => {
+export const getValidatorFn = (
+  /** One or more `RegExp` patterns. */
+  regexArg: RegExp | Array<RegExp>,
+  /** A fn which returns `true` if `value` is of the expected type (default: {@link isString}). */
+  isExpectedType: (value?: unknown) => boolean = isString
+): ValidatorFn => {
   return Array.isArray(regexArg)
     ? (value?: unknown): value is string => {
-        return isString(value) && regexArg.every((regex) => regex.test(value));
+        return isExpectedType(value) && regexArg.every((regex) => regex.test(value as string));
       }
     : (value?: unknown): value is string => {
-        return isString(value) && regexArg.test(value);
+        return isExpectedType(value) && regexArg.test(value as string);
       };
 };
