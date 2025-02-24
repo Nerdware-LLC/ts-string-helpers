@@ -59,6 +59,9 @@
     "prebuild": "[ -d dist ] && rm -rf dist || true",
     "build": "scripts/cicd.build.sh"
   },
+  "dependencies": {
+    "@nerdware/ts-type-safety-utils": "^1.2.0"
+  },
   "devDependencies": {
     "@stylistic/eslint-plugin": "^3.1.0",
     "@types/node": "^22.13.4",
