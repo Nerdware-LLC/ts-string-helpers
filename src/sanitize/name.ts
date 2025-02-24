@@ -1,4 +1,4 @@
-import { getSanitizerFn } from "./_helpers.js";
+import { getSanitizerFn } from "../utils/getSanitizerFn.js";
 
 /**
  * Removes characters from `str` which are generally not valid in a name.

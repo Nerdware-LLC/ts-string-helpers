@@ -1,6 +1,6 @@
 import { isValidID } from "./id.js";
 
-describe("validate: id", () => {
+describe("isValidID", () => {
   // POSITIVE TEST CASES:
 
   test(`returns true when given a string containing only alphanumeric characters, "#", and/or "-"`, () => {

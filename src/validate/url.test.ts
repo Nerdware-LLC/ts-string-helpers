@@ -1,6 +1,6 @@
 import { isValidURL, isValidHttpURL } from "./url.js";
 
-describe("validate: URL", () => {
+describe("isValidURL", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a valid absolute HTTP/S URL string", () => {
@@ -47,7 +47,7 @@ describe("validate: URL", () => {
   });
 });
 
-describe("validate: HTTP URL", () => {
+describe("isValidHttpURL", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a valid absolute HTTP/S URL string", () => {

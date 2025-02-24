@@ -1,6 +1,6 @@
 import { sanitizeText } from "./text.js";
 
-describe("sanitize: text", () => {
+describe("sanitizeText", () => {
   test("removes characters that pose security risks", () => {
     expect(sanitizeText(`Hello {world}!`)).toBe("Hello world!");
     expect(sanitizeText(`Hello [world]!`)).toBe("Hello world!");

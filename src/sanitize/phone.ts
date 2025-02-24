@@ -1,6 +1,6 @@
-import { sanitizeNumeric } from "./numeric.js";
+import { getSanitizerFn } from "../utils/getSanitizerFn.js";
 
 /**
- * Removes all non-digit characters from `str` (converts `"(888) 123-4567"` into `"8881234567"`).
+ * Removes all non-phone characters from `str`.
  */
-export const sanitizePhone = sanitizeNumeric;
+export const sanitizePhone = getSanitizerFn(/[^0-9\x20()+-]/g);

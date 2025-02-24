@@ -1,6 +1,6 @@
 import { isValidEmail } from "./email.js";
 
-describe("validate: email", () => {
+describe("isValidEmail", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a valid email address string", () => {

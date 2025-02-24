@@ -1,6 +1,6 @@
 import { isValidJsonString } from "./jsonString.js";
 
-describe("validate: jsonString", () => {
+describe("isValidJsonString", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a string containing only valid JSON characters characters", () => {

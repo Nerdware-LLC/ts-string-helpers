@@ -1,7 +1,15 @@
-import { getValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "../utils/getValidatorFn.js";
 
 /**
- * Returns `true` if `value` is a valid string of US phone number _DIGITS_
- * (no spaces or special characters).
+ * Regex for validating US phone number strings.
+ * - Accepts US phone numbers with or without a country code (`+1` or `1`).
+ * - The segments of the phone number may be separated by a space or hyphen.
+ * - The area code may be enclosed in parentheses.
  */
-export const isValidPhone = getValidatorFn(/^[1-9]\d{9}$/);
+export const PHONE_VALIDATION_REGEX =
+  /^((\+1|1)(\x20|-)?)?(\([2-9][0-9]{2}\)|[2-9][0-9]{2})(\x20|-)?([2-9][0-9]{2}(\x20|-)?[0-9]{4})$/;
+
+/**
+ * Returns `true` if `value` is a valid US phone number.
+ */
+export const isValidPhone = getValidatorFn(PHONE_VALIDATION_REGEX);

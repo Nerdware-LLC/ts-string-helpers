@@ -1,6 +1,6 @@
 import { isValidText } from "./text.js";
 
-describe("validate: text", () => {
+describe("isValidText", () => {
   test("returns true for valid text", () => {
     expect(isValidText("Hello world!")).toBe(true);
     expect(isValidText("123%$#@'&.,:;!?+=()_—-")).toBe(true);

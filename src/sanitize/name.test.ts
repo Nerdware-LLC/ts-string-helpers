@@ -1,6 +1,6 @@
 import { sanitizeName } from "./name.js";
 
-describe("sanitize: name", () => {
+describe("sanitizeName", () => {
   test("removes invalid characters from the name", () => {
     expect(sanitizeName("Jane Doe!@#$%^&*()_+123")).toBe("Jane Doe");
   });

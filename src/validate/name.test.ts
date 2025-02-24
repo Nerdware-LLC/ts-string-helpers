@@ -1,6 +1,6 @@
 import { isValidName } from "./name.js";
 
-describe("validate: name", () => {
+describe("isValidName", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when called with a value which contains ASCII letters", () => {
@@ -18,6 +18,9 @@ describe("validate: name", () => {
 
   // NEGATIVE TEST CASES:
 
+  test("returns false when called with a value that starts with an apostrophe", () => {
+    expect(isValidName("'Jane Doe")).toBe(false);
+  });
   test("returns false when called with a value which contains invalid special characters", () => {
     expect(isValidName("Jane Doe!@#$%^&*()_+123")).toBe(false);
   });

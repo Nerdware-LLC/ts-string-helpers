@@ -1,6 +1,6 @@
 import { isValidPassword } from "./password.js";
 
-describe("validate: password", () => {
+describe("isValidPassword", () => {
   // POSITIVE TEST CASES:
 
   test("returns true when given a valid password string", () => {

@@ -1,4 +1,4 @@
-import { getSanitizerFn } from "./_helpers.js";
+import { getSanitizerFn } from "../utils/getSanitizerFn.js";
 
 /**
  * Removes non-alphanumeric characters from `str` which are not `#` or `-`.

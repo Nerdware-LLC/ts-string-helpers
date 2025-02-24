@@ -1,4 +1,4 @@
-import { getSanitizerFn } from "./_helpers.js";
+import { getSanitizerFn } from "../utils/getSanitizerFn.js";
 
 /**
  * Removes all non-URL characters from `str`.
