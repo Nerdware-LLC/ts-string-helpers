@@ -17,3 +17,4 @@ export * from "./phone.js";
 export * from "./streetAddress.js";
 export * from "./text.js";
 export * from "./url.js";
+export * from "./uuid.js";
