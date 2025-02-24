@@ -1,7 +1,5 @@
 export * from "./alphabetic.js";
-export * from "./alphabeticWithSpaces.js";
 export * from "./alphanumeric.js";
-export * from "./alphanumericWithSpaces.js";
 export * from "./base64.js";
 export * from "./base64URL.js";
 export * from "./currency.js";
