@@ -1,4 +1,4 @@
-import { getValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "../utils/getValidatorFn.js";
 
 /**
  * Returns `true` is `value` only contains valid JSON characters.

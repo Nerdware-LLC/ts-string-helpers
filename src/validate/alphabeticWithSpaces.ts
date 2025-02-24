@@ -1,4 +1,4 @@
-import { getValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "../utils/getValidatorFn.js";
 
 /**
  * Returns `true` if `value` only contains alphabetic characters and/or spaces.

@@ -1,4 +1,4 @@
-import { getValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "../utils/getValidatorFn.js";
 
 /**
  * Returns `true` if `value` is a valid password, which must meet the following conditions:

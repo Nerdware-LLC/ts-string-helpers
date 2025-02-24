@@ -1,4 +1,4 @@
-import { getValidatorFn } from "./_helpers.js";
+import { getValidatorFn } from "../utils/getValidatorFn.js";
 
 /**
  * Returns `true` if `value` is a valid base64-encoded string.
