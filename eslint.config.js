@@ -1,43 +1,77 @@
 import eslintJS from "@eslint/js";
 import stylisticPlugin from "@stylistic/eslint-plugin";
 import vitestPlugin from "@vitest/eslint-plugin";
+import { defineConfig } from "eslint/config";
 import eslintConfigPrettier from "eslint-config-prettier";
-import importPlugin from "eslint-plugin-import-x";
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
+import {
+  importX as importXPlugin,
+  createNodeResolver,
+} from "eslint-plugin-import-x";
 import nodePlugin from "eslint-plugin-n";
 import globals from "globals";
 import tsEslint from "typescript-eslint";
 
-export default tsEslint.config(
-  ///////////////////////////////////////////////////////////////////
-  // ALL FILES
+// Shared constants:
+const PARSED_EXTENSIONS = [".ts", ".js"];
+
+export default defineConfig(
+  /////////////////////////////////////////////////////////////////////////////
+  // GLOBAL CONFIGS
   {
-    files: ["src/**/*.ts", "./*.[tj]s"],
-    linterOptions: { reportUnusedDisableDirectives: true },
+    name: "global/ignores",
+    ignores: ["**/node_modules/", "**/coverage/", "**/dist/"],
+  },
+  {
+    name: "global/languageOptions",
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",
-      globals: globals.node,
       parser: tsEslint.parser,
       parserOptions: {
         projectService: true,
         tsconfigRootDir: import.meta.dirname,
       },
     },
+  },
+  {
+    name: "global/linterOptions",
+    linterOptions: {
+      reportUnusedDisableDirectives: true,
+    },
+  },
+  {
+    name: "global/plugins",
     plugins: {
       "@stylistic": stylisticPlugin,
       "@typescript-eslint": tsEslint.plugin,
-      "import-x": importPlugin,
+      "import-x": importXPlugin,
       "n": nodePlugin,
+      "vitest": vitestPlugin,
     },
     settings: {
-      "import-x/extensions": [".ts", ".js"],
+      ...importXPlugin.configs.typescript.settings,
+      "import-x/extensions": PARSED_EXTENSIONS,
       "import-x/parsers": {
-        "@typescript-eslint/parser": [".ts", ".js"],
+        "@typescript-eslint/parser": PARSED_EXTENSIONS,
       },
-      "import-x/resolver": {
-        node: { extensions: [".ts", ".js"] },
-        typescript: { project: ["tsconfig.json"] },
+      "import-x/resolver-next": [
+        createTypeScriptImportResolver({ alwaysTryTypes: true }),
+        createNodeResolver({ extensions: PARSED_EXTENSIONS }),
+      ],
+      "n": {
+        // Runtime nodejs version !== dev nodejs version
+        version: ">=22.19.0",
       },
+    },
+  },
+  /////////////////////////////////////////////////////////////////////////////
+  // ALL FILES
+  {
+    name: "files:all/base",
+    files: ["src/**/*.ts", "./*.[tj]s"],
+    languageOptions: {
+      globals: globals.node,
     },
     rules: {
       // MERGE PRESETS:
@@ -45,7 +79,8 @@ export default tsEslint.config(
         { semi: true, quotes: "double", arrowParens: true, braceStyle: "1tbs" } // prettier-ignore
       ).rules,
       ...eslintJS.configs.recommended.rules,
-      ...importPlugin.configs.recommended.rules,
+      ...importXPlugin.configs.recommended.rules,
+      ...importXPlugin.configs.typescript.rules,
       ...nodePlugin.configs["flat/recommended-module"].rules,
       ...[
         ...tsEslint.configs.strictTypeChecked,
@@ -75,7 +110,7 @@ export default tsEslint.config(
       "import-x/order": [
         "warn",
         {
-          "groups": ["builtin", "external", "internal", "parent", "sibling", "type"], // prettier-ignore
+          "groups": ["builtin", "external", "internal", "parent", ["index", "sibling"], "type"], // prettier-ignore
           "alphabetize": { order: "asc", orderImportKind: "desc" },
           "newlines-between": "never",
         },
@@ -93,15 +128,12 @@ export default tsEslint.config(
       ...eslintConfigPrettier.rules,
     },
   },
-  ///////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
   // TEST FILES
   {
     files: ["src/**/*.test.ts"],
     languageOptions: {
       globals: vitestPlugin.environments.env.globals,
-    },
-    plugins: {
-      vitest: vitestPlugin,
     },
     rules: {
       ...vitestPlugin.configs.recommended.rules,
@@ -110,5 +142,5 @@ export default tsEslint.config(
       "vitest/valid-expect": "warn",
     },
   }
-  ///////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
 );
